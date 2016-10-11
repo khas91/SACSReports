@@ -5,26 +5,54 @@ using System.Text;
 using System.Threading.Tasks;
 using PLR;
 using System.Data.SqlClient;
+using CommandLine;
+using CommandLine.Text;
 
 namespace CDM
 {
     class CDMReport
     {
+        class Options
+        {
+            [Option('m', "minTerm", Required = true,
+                HelpText = "Term after which classes taking place and effective programs will qualify")]
+            public String minTerm { get; set; }
+            [Option('x', "maxTerm", Required = true,
+                HelpText = "Term before which classes taking place and effective programs will qualify")]
+            public String maxTerm { get; set; }
+            [Option('p', "programCode", Required = false, DefaultValue = "",
+                HelpText = "Used to restrict results to classes for a specific program (not required)")]
+            public String programCode { get; set; }
+            [Option('c', "campusCenter", Required = false, DefaultValue = "",
+                HelpText = "Used to restrict results to classes taking place a specific campus Center (not required)")]
+            public String campusCenter { get; set; }
+            [Option('a', "awardType", Required = false, DefaultValue = "",
+                HelpText = "Used to restrict results to classes for programs with the specified award type")]
+            public String awardType { get; set; }
+            [Option('r', "highSchoolMode", Required = false, DefaultValue = false,
+                HelpText = "Used to toggle high school mode on or off (causes only high school campus centers to be returned, default = false)")]
+            public bool runForHighSchool { get; set; }
+            [ParserState]
+            public IParserState LastParserState { get; set; }
+
+            [HelpOption]
+            public string GetUsage()
+            {
+                return HelpText.AutoBuild(this,
+                  (HelpText current) => HelpText.DefaultParsingErrorsHandler(this, current));
+            }
+        }
+
         static void Main(string[] args)
         {
-            //Parameters
-            String minTerm = "20122";
-            String maxTerm = "20172";
-            String programCode = "";
-            String campusCenter = "";
-            String awardType = "";
-            bool runForHighSchool = true;
+            Options options = new Options();
+            Parser.Default.ParseArguments(args, options);
 
             //derived parameters
-            int minTermYear = int.Parse(minTerm.Substring(0, 4));
-            int minTermTerm = int.Parse("" + minTerm[4]);
-            int maxTermYear = int.Parse(maxTerm.Substring(0, 4));
-            int maxTermTerm = int.Parse("" + maxTerm[4]);
+            int minTermYear = int.Parse(options.minTerm.Substring(0, 4));
+            int minTermTerm = int.Parse("" + options.minTerm[4]);
+            int maxTermYear = int.Parse(options.maxTerm.Substring(0, 4));
+            int maxTermTerm = int.Parse("" + options.maxTerm[4]);
 
             //datastores
             Dictionary<String, AcademicProgram> programDictionary = new Dictionary<string, AcademicProgram>();
@@ -75,8 +103,8 @@ namespace CDM
 	                                         +"       INNER JOIN MIS.dbo.ST_PROGRAMS_A_PGM_AREA_GROUP_CRS_136 groupcourse ON groupcourse.ISN_ST_PROGRAMS_A = proggroup.ISN_ST_PROGRAMS_A"
                                              +"   WHERE                                                                                                                                 "
 	                                         +"       prog.EFF_TRM_D <> ''                                                                                                              "
-                                             +"       AND prog.EFF_TRM_D <= '" + maxTerm + "'                                                                                           "
-                                             +"       AND (prog.END_TRM = '' OR prog.END_TRM >= '" + minTerm + "')                                                                      "
+                                             +"       AND prog.EFF_TRM_D <= '" + options.maxTerm + "'                                                                                           "
+                                             +"       AND (prog.END_TRM = '' OR prog.END_TRM >= '" + options.minTerm + "')                                                                      "
                                              +"       AND prog.FIN_AID_APPRVD = 'Y'                                                                                                     "
 	                                         +"       AND prog.AWD_TY NOT IN ('NC','ND','HS')                                                                                           "
 	                                         +"       AND SUBSTRING(prog.PGM_CD, 1, 2) <> '00'                                                                                          "
@@ -223,8 +251,8 @@ namespace CDM
                                  +"     INNER JOIN MIS.dbo.ST_PROGRAMS_A_136 prog ON prog.PGM_CD = proggroup.PGM_CD                                                 "
 		                         +"                                             AND prog.EFF_TRM_D = proggroup.EFF_TRM_G										    "   
                                  +" WHERE                                                                                                                           " 
-                                 +"     class.efftrm >= '" + minTerm + "'                                                                                           "
-                                 +"     AND class.efftrm <= '" + maxTerm + "'                                                                                       "
+                                 +"     class.efftrm >= '" + options.minTerm + "'                                                                                           "
+                                 +"     AND class.efftrm <= '" + options.maxTerm + "'                                                                                       "
                                  +"     AND prog.FIN_AID_APPRVD = 'Y'                                                                                               " 
                                  +"     AND prog.AWD_TY NOT IN ('NC','ND','HS')                                                                                     " 
                                  +"     AND SUBSTRING(prog.PGM_CD, 1, 2) <> '00'                                                                                    " 
@@ -571,7 +599,7 @@ namespace CDM
                         percentGenEdHours = percentGenEdHours * 100;
                         percentCoreAndProfessionalHours = percentCoreAndProfessionalHours * 100;
 
-                        file.WriteLine(String.Format(minTerm + "," + maxTerm + "," + prog.awardType + "," + prog.progCode + @",""" + prog.progName + @"""," + catalog.totalProgramHours + ","
+                        file.WriteLine(String.Format(options.minTerm + "," + options.maxTerm + "," + prog.awardType + "," + prog.progCode + @",""" + prog.progName + @"""," + catalog.totalProgramHours + ","
                             + totalProgramHours + ",{0:0.00}," + totalGenEdHours + ",{1:0.00}," + totalCoreAndProfessional + ",{2:0.00},Y", percentProgramHours, percentGenEdHours, percentCoreAndProfessionalHours));
                     }
                 }

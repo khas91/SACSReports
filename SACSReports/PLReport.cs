@@ -1,4 +1,7 @@
-﻿using System;
+﻿
+using CommandLine;
+using CommandLine.Text;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -9,21 +12,50 @@ namespace PLR
 {
     public class PLReport
     {
+        class Options
+        {
+            [Option('m', "minTerm", Required = true,
+                HelpText="Term after which classes taking place and effective programs will qualify")]
+            public String minTerm { get; set; }
+            [Option('x', "maxTerm", Required = true,
+                HelpText = "Term before which classes taking place and effective programs will qualify")]
+            public String maxTerm { get; set; }
+            [Option('p', "programCode", Required = false, DefaultValue="",
+                HelpText="Used to restrict results to classes for a specific program (not required)")]
+            public String programCode { get; set; }
+            [Option('c',"campusCenter", Required = false, DefaultValue = "",
+                HelpText = "Used to restrict results to classes taking place a specific campus Center (not required)")]
+            public String campusCenter {get; set;}
+            [Option ('a', "awardType", Required = false, DefaultValue = "",
+                HelpText = "Used to restrict results to classes for programs with the specified award type")]
+            public String awardType { get; set;}
+            [Option ('r', "highSchoolMode", Required = false, DefaultValue = false,
+                HelpText = "Used to toggle high school mode on or off (causes only high school campus centers to be returned, default = false)")]
+            public bool runForHighSchool {get; set;}
+            [ParserState]
+            public IParserState LastParserState {get; set;}
+
+            [HelpOption]
+            public string GetUsage() 
+            {
+                return HelpText.AutoBuild(this,
+                  (HelpText current) => HelpText.DefaultParsingErrorsHandler(this, current));
+            }
+        }
+
         static void Main(string[] args)
         {
+            Options options = new Options();
+
+            CommandLine.Parser.Default.ParseArguments(args, options);
             //Parameters
-            String minTerm = "20141";
-            String maxTerm = "20172";
-            String programCode = "";
-            String campusCenter = "";
-            String awardType = "";
-            bool runForHighSchool = true;
+            
  
             //derived parameters
-            int minTermYear = int.Parse(minTerm.Substring(0, 4));
-            int minTermTerm = int.Parse("" + minTerm[4]);
-            int maxTermYear = int.Parse(maxTerm.Substring(0, 4));
-            int maxTermTerm = int.Parse("" + maxTerm[4]);
+            int minTermYear = int.Parse(options.minTerm.Substring(0, 4));
+            int minTermTerm = int.Parse("" + options.minTerm[4]);
+            int maxTermYear = int.Parse(options.maxTerm.Substring(0, 4));
+            int maxTermTerm = int.Parse("" + options.maxTerm[4]);
 
             //datastores
             Dictionary<String, AcademicProgram> programDictionary = new Dictionary<string, AcademicProgram>();
@@ -107,8 +139,8 @@ namespace PLR
                                             + "    INNER JOIN MIS.dbo.ST_PROGRAMS_A_PGM_AREA_GROUP_CRS_136 groupcourse ON groupcourse.ISN_ST_PROGRAMS_A = proggroup.ISN_ST_PROGRAMS_A "
                                             + "WHERE                                                                                                                                  "
                                             + "    prog.EFF_TRM_D <> ''                                                                                                               "
-                                            + "    AND prog.EFF_TRM_D <= '" + maxTerm + "'                                                                                            "
-                                            + "    AND (prog.END_TRM = '' OR prog.END_TRM >= '" + minTerm + "')                                                                       "
+                                            + "    AND prog.EFF_TRM_D <= '" + options.maxTerm + "'                                                                                            "
+                                            + "    AND (prog.END_TRM = '' OR prog.END_TRM >= '" + options.minTerm + "')                                                                       "
                                             + "    AND prog.AWD_TY NOT IN ('ND','NC','HS')                                                                                            "
                                            // + programCode == "" ? " " : ("   AND prog.PGM_CD = '" + programCode + "' ") /* causes SQL exception when uncommented. Don't know why */
                                             + "ORDER BY                                                                                                                               "
@@ -237,7 +269,7 @@ namespace PLR
             {
                 String campCntr = reader["campCntr"].ToString();
 
-                if (runForHighSchool)
+                if (options.runForHighSchool)
                 {
                     if (!highschoolCodes.Contains(campCntr))
                     {
@@ -277,8 +309,9 @@ namespace PLR
 	                              + "     INNER JOIN MIS.[dbo].[ST_PROGRAMS_A_PGM_AREA_GROUP_CRS_136] groupcourse ON groupcourse.[PGM_AREA_GROUP_CRS] =  course.CRS_ID  "
 	                              + "     INNER JOIN MIS.dbo.ST_PROGRAMS_A_136 proggroup ON proggroup.ISN_ST_PROGRAMS_A = groupcourse.ISN_ST_PROGRAMS_A                 "
                                   + " WHERE                                                                                                                             "
-	                              + "     class.efftrm <= '" + maxTerm + "'                                                                                             "
-	                              + "     AND class.efftrm >= '" + minTerm + "'", conn);
+	                              + "     class.efftrm <= '" + options.maxTerm + "'                                                                                             "
+                                  + options.campusCenter == "" ? "" : "     AND class.campCntr = '" + options.campusCenter + "'                                                         "
+	                              + "     AND class.efftrm >= '" + options.minTerm + "'", conn);
             comm.CommandTimeout = 240;
             reader = comm.ExecuteReader();
 
@@ -618,7 +651,7 @@ namespace PLR
                                         }
                                     }
                                                                         
-                                    file.WriteLine(curProgram.progCode + "," + curProgram.awardType + "," + catalog.effectiveTerm + "," + camp + "," + minTerm + "," + maxTerm + "," +
+                                    file.WriteLine(curProgram.progCode + "," + curProgram.awardType + "," + catalog.effectiveTerm + "," + camp + "," + options.minTerm + "," + options.maxTerm + "," +
                                         areaNum.ToString() + "," + groupNum.ToString() + "," + course + "," + globalCourseDictionary[course].hours.ToString() + "," +
                                         (TotalProgramHoursForProgramByCampusCenter[key] > catalog.totalProgramHours ? catalog.totalProgramHours.ToString() : 
                                         TotalProgramHoursForProgramByCampusCenter[key].ToString() )
@@ -636,7 +669,7 @@ namespace PLR
 
                                         if (!SatisfiedCoursesForProgramByCatalogYearAndCampusCenter[key].Contains(course))
                                         {
-                                          file.WriteLine(curProgram.progCode + "," + curProgram.awardType + "," + catalog.effectiveTerm + "," + camp + "," + minTerm + "," + maxTerm + ",ELEC,,"
+                                          file.WriteLine(curProgram.progCode + "," + curProgram.awardType + "," + catalog.effectiveTerm + "," + camp + "," + options.minTerm + "," + options.maxTerm + ",ELEC,,"
                                             + course + "," + globalCourseDictionary[course].hours.ToString() + "," + (TotalProgramHoursForProgramByCampusCenter[key] > catalog.totalProgramHours 
                                             ? catalog.totalProgramHours.ToString() : TotalProgramHoursForProgramByCampusCenter[key].ToString()) + "," + (TotalGeneralEducationHoursForProgramByCampusCenter[key] 
                                             > catalog.totalGeneralEducationHours ? catalog.totalGeneralEducationHours.ToString(): TotalGeneralEducationHoursForProgramByCampusCenter[key].ToString()) 
