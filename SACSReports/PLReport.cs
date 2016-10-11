@@ -32,6 +32,10 @@ namespace PLR
             [Option ('r', "highSchoolMode", Required = false, DefaultValue = false,
                 HelpText = "Used to toggle high school mode on or off (causes only high school campus centers to be returned, default = false)")]
             public bool runForHighSchool {get; set;}
+            [Option('o', "month", Required = true)]
+            public String month { get; set; }
+            [Option('y', "year", Required = true)]
+            public String year { get; set; }
             [ParserState]
             public IParserState LastParserState {get; set;}
 
@@ -43,13 +47,15 @@ namespace PLR
             }
         }
 
-        static void Main(string[] args)
+        static int Main(string[] args)
         {
             Options options = new Options();
 
-            CommandLine.Parser.Default.ParseArguments(args, options);
-            //Parameters
-            
+            if (!CommandLine.Parser.Default.ParseArgumentsStrict(args, options) || 
+                options.minTerm == null || options.maxTerm == null || options.month == null || options.year == null)
+            {
+                return -1;
+            }
  
             //derived parameters
             int minTermYear = int.Parse(options.minTerm.Substring(0, 4));
@@ -70,38 +76,9 @@ namespace PLR
             Dictionary<Tuple<String, String, String>, List<String>> SatisfiedCoursesForProgramByCatalogYearAndCampusCenter = new Dictionary<Tuple<string, string, string>, List<string>>();
             Dictionary<Tuple<String, String, String>, List<String>> AACoursesByAACatalogAndCampus = new Dictionary<Tuple<string, string, string>, List<string>>();
 
-            String[] highschoolCodes = new String[]{"D1427",
-                                                    "C1411",
-                                                    "A1618",
-                                                    "D1401",
-                                                    "C1634",
-                                                    "C1414",
-                                                    "A1103",
-                                                    "B1403",
-                                                    "A1104",
-                                                    "A1105",
-                                                    "D1103",
-                                                    "B1408",
-                                                    "A1110",
-                                                    "A1111",
-                                                    "A1112",
-                                                    "Z7000",
-                                                    "A1303",
-                                                    "A1116",
-                                                    "A1301",
-                                                    "A1117",
-                                                    "Z7004",
-                                                    "A1118",
-                                                    "B1613",
-                                                    "A1119",
-                                                    "A1114",
-                                                    "Z7015",
-                                                    "Z7002",
-                                                    "B1410",
-                                                    "F1410",
-                                                    "A1106",
-                                                    "A1122",
-                                                    "B1414"};
+            String[] highschoolCodes = new String[]{"D1427","C1411","A1618","D1401","C1634","C1414","A1103","B1403","A1104","A1105","D1103","B1408","A1110","A1111","A1112",
+                                                    "Z7000","A1303","A1116","A1301","A1117","Z7004","A1118","B1613","A1119","A1114","Z7015","Z7002","B1410","F1410","A1106",
+                                                    "A1122","B1414"};
             
             SqlConnection conn = new SqlConnection("Server=vulcan;database=MIS;Trusted_Connection=yes");
 
@@ -142,7 +119,7 @@ namespace PLR
                                             + "    AND prog.EFF_TRM_D <= '" + options.maxTerm + "'                                                                                            "
                                             + "    AND (prog.END_TRM = '' OR prog.END_TRM >= '" + options.minTerm + "')                                                                       "
                                             + "    AND prog.AWD_TY NOT IN ('ND','NC','HS')                                                                                            "
-                                           // + programCode == "" ? " " : ("   AND prog.PGM_CD = '" + programCode + "' ") /* causes SQL exception when uncommented. Don't know why */
+                                            + (options.programCode == "" ? " " : ("   AND prog.PGM_CD = '" + options.programCode + "' "))
                                             + "ORDER BY                                                                                                                               "
                                             + "    prog.PGM_CD                                                                                                                        "
                                             + "    ,prog.EFF_TRM_D                                                                                                                    "
@@ -309,8 +286,8 @@ namespace PLR
 	                              + "     INNER JOIN MIS.[dbo].[ST_PROGRAMS_A_PGM_AREA_GROUP_CRS_136] groupcourse ON groupcourse.[PGM_AREA_GROUP_CRS] =  course.CRS_ID  "
 	                              + "     INNER JOIN MIS.dbo.ST_PROGRAMS_A_136 proggroup ON proggroup.ISN_ST_PROGRAMS_A = groupcourse.ISN_ST_PROGRAMS_A                 "
                                   + " WHERE                                                                                                                             "
-	                              + "     class.efftrm <= '" + options.maxTerm + "'                                                                                             "
-                                  + options.campusCenter == "" ? "" : "     AND class.campCntr = '" + options.campusCenter + "'                                                         "
+	                              + "     class.efftrm <= '" + options.maxTerm + "'                                                                                     "
+                                  + (options.campusCenter == "" ? "" : ("     AND class.campCntr = '" + options.campusCenter + "'"))
 	                              + "     AND class.efftrm >= '" + options.minTerm + "'", conn);
             comm.CommandTimeout = 240;
             reader = comm.ExecuteReader();
@@ -620,7 +597,8 @@ namespace PLR
                 }
             }
 
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter("output.csv"))
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter("..\\..\\..\\" + options.month + " " +
+                options.year + "\\SACS " + (options.runForHighSchool ? "High School" : "") + "Program Location Report " + options.month + " " + options.year + ".csv"))
             {
                 file.WriteLine("PGM CD, AWD TYPE, CATALOG YEAR, CAMP CNTR, TRM FROM, TRM TO, AREA, GROUP, CRS ID USED, CRS HRS, TOT PGM HRS, TOT GEN-ED HRS, TOT PROF HRS");
 
@@ -684,6 +662,8 @@ namespace PLR
                 }
 
                 file.Close();
+
+                return 0;
             }
         }
 
