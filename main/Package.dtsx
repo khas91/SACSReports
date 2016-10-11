@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{5B01B8AD-8401-4359-A06B-9746C29AC5BE}">
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{AF2C2D4A-88AB-46A9-96D9-733CCCD2ADF2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2975,6 +2975,27 @@
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Execute Process Task"
+      DTS:CreationName="Microsoft.ExecuteProcess"
+      DTS:Description="Execute Process Task"
+      DTS:DTSID="{2F379E54-566E-44ED-B849-1E269E9B4021}"
+      DTS:ExecutableType="Microsoft.ExecuteProcess"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute Process Task"
+      DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:PropertyExpression
+        DTS:Name="Arguments">"-m " + @minTerm + " -x " + @maxTerm + " -o " + @month + " -y " + @year</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <ExecuteProcessData
+          Executable="Z:\Stuart\ConsoleApplications\SACSReports\SACSReports\bin\Debug\SACSReports.exe"
+          Arguments="-m 20161 -x 20172 -o October -y 2016"
+          WorkingDirectory="Z:\Stuart\ConsoleApplications\SACSReports\SACSReports\bin\Debug"
+          WindowStyle="Hidden" />
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -2991,7 +3012,11 @@
         <NodeLayout
           Size="151,42"
           Id="Package\Data Flow Task"
-          TopLeft="274,199" />
+          TopLeft="245,153" />
+        <NodeLayout
+          Size="180,42"
+          Id="Package\Execute Process Task"
+          TopLeft="92,55" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
