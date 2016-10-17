@@ -52,7 +52,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SACSReports\PLR.csproj">
+    <ProjectReference Include="..\PLR\PLR.csproj">
       <Project>{2a82d520-9720-4af4-aec2-f24ebbcb623a}</Project>
       <Name>PLR</Name>
     </ProjectReference>

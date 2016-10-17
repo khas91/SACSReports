@@ -7,6 +7,7 @@ using PLR;
 using System.Data.SqlClient;
 using CommandLine;
 using CommandLine.Text;
+using System.IO;
 
 namespace CDM
 {
@@ -32,6 +33,10 @@ namespace CDM
             [Option('r', "highSchoolMode", Required = false, DefaultValue = false,
                 HelpText = "Used to toggle high school mode on or off (causes only high school campus centers to be returned, default = false)")]
             public bool runForHighSchool { get; set; }
+            [Option('o', "month", Required = true)]
+            public String month { get; set; }
+            [Option('y', "year", Required = true)]
+            public String year { get; set; }
             [ParserState]
             public IParserState LastParserState { get; set; }
 
@@ -576,7 +581,15 @@ namespace CDM
                 }
             }
 
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter("output.csv"))
+            DirectoryInfo dataDirectory = new DirectoryInfo("..\\..\\..\\data\\" + options.month + " " + options.year);
+
+            if (!dataDirectory.Exists)
+            {
+                Directory.CreateDirectory("..\\..\\..\\data\\" + options.month + " " + options.year);
+            }
+
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter("..\\..\\..\\data\\" + options.month + " " + options.year + 
+                "\\SACS Course Delivery Method Report " + options.month + " " + options.year + ".csv"))
             {
                 file.WriteLine("Begin Term, End Term, Award Type, POS Code, POS Title, PGM Hrs (reqd for degree), # PGM hrs via DE, % PGM Hrs via DE, # Gen Ed Hrs via DE, % Gen Ed Hrs via DE, # Prof Hrs via DE, % Prof Hrs via DE, FA Apprvd");
 

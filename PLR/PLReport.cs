@@ -4,6 +4,7 @@ using CommandLine.Text;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -597,7 +598,14 @@ namespace PLR
                 }
             }
 
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter("..\\..\\..\\" + options.month + " " +
+            DirectoryInfo dataDirectory = new DirectoryInfo("..\\..\\..\\data\\" + options.month + " " + options.year);
+
+            if (!dataDirectory.Exists)
+            {
+                Directory.CreateDirectory("..\\..\\..\\data\\" + options.month + " " + options.year);
+            }
+
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter("..\\..\\..\\data\\" + options.month + " " +
                 options.year + "\\SACS " + (options.runForHighSchool ? "High School" : "") + "Program Location Report " + options.month + " " + options.year + ".csv"))
             {
                 file.WriteLine("PGM CD, AWD TYPE, CATALOG YEAR, CAMP CNTR, TRM FROM, TRM TO, AREA, GROUP, CRS ID USED, CRS HRS, TOT PGM HRS, TOT GEN-ED HRS, TOT PROF HRS");
