@@ -108,8 +108,8 @@ namespace CDM
 	                                         +"       INNER JOIN MIS.dbo.ST_PROGRAMS_A_PGM_AREA_GROUP_CRS_136 groupcourse ON groupcourse.ISN_ST_PROGRAMS_A = proggroup.ISN_ST_PROGRAMS_A"
                                              +"   WHERE                                                                                                                                 "
 	                                         +"       prog.EFF_TRM_D <> ''                                                                                                              "
-                                             +"       AND prog.EFF_TRM_D <= '" + options.maxTerm + "'                                                                                           "
-                                             +"       AND (prog.END_TRM = '' OR prog.END_TRM >= '" + options.minTerm + "')                                                                      "
+                                             +"       AND prog.EFF_TRM_D <= '" + options.maxTerm + "'                                                                                   "
+                                             +"       AND (prog.END_TRM = '' OR prog.END_TRM >= '" + options.minTerm + "')                                                              "
                                              +"       AND prog.FIN_AID_APPRVD = 'Y'                                                                                                     "
 	                                         +"       AND prog.AWD_TY NOT IN ('NC','ND','HS')                                                                                           "
 	                                         +"       AND SUBSTRING(prog.PGM_CD, 1, 2) <> '00'                                                                                          "
@@ -619,8 +619,6 @@ namespace CDM
 
                 file.Close();
             }
-
-            Console.WriteLine("dub!");
         }
     }
 }
