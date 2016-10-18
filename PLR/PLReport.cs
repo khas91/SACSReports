@@ -606,7 +606,7 @@ namespace PLR
             }
 
             using (System.IO.StreamWriter file = new System.IO.StreamWriter("..\\..\\..\\data\\" + options.month + " " +
-                options.year + "\\SACS " + (options.runForHighSchool ? "High School" : "") + "Program Location Report " + options.month + " " + options.year + ".csv"))
+                options.year + "\\SACS " + (options.runForHighSchool ? "High School " : "") + "Program Location Report " + options.month + " " + options.year + ".csv"))
             {
                 file.WriteLine("PGM CD, AWD TYPE, CATALOG YEAR, CAMP CNTR, TRM FROM, TRM TO, AREA, GROUP, CRS ID USED, CRS HRS, TOT PGM HRS, TOT GEN-ED HRS, TOT PROF HRS");
 
