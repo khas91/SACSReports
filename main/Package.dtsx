@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="77"
-  DTS:VersionGUID="{357CFE83-FB13-4D23-8AD9-BC80490D537F}">
+  DTS:VersionBuild="84"
+  DTS:VersionGUID="{43BF34B9-925E-4C9C-8E34-F6C483FE54E6}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -369,7 +369,7 @@
           DTS:HeaderRowDelimiter="_x000D__x000A_"
           DTS:ColumnNamesInFirstDataRow="True"
           DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
@@ -379,7 +379,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="PGM CD"
-              DTS:DTSID="{45436F2B-60D5-417B-988B-569D22D93C5C}"
+              DTS:DTSID="{8AC49B19-BC51-430B-A4B6-3606C3B791BA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -388,7 +388,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName=" AWD TYPE"
-              DTS:DTSID="{EC881018-34F7-4E2D-877D-3E022E2924A8}"
+              DTS:DTSID="{398215B4-814E-4680-9AE0-458B8E8BEBF3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -397,7 +397,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName=" CATALOG YEAR"
-              DTS:DTSID="{12894A09-6EF3-4095-A2B6-5A3AC0B5EEDD}"
+              DTS:DTSID="{DA216C1C-9E9E-457B-B666-AA060B75761F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -406,7 +406,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName=" CAMP CNTR"
-              DTS:DTSID="{1CC8F0C2-A149-4153-B409-B0BC4044FE65}"
+              DTS:DTSID="{99058240-6603-424E-B651-E2466C4FBA12}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -415,7 +415,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName=" TRM FROM"
-              DTS:DTSID="{43791A34-FB2E-42C9-8955-E230A688E008}"
+              DTS:DTSID="{3EF2A56D-B9FF-4D92-A21B-2FDB1DE085AE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -424,7 +424,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName=" TRM TO"
-              DTS:DTSID="{842F0689-6A7D-4AA4-90C6-609F82F202B1}"
+              DTS:DTSID="{6367C60F-FB47-4D0C-ACBA-0C2F5A00E243}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -433,7 +433,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName=" AREA"
-              DTS:DTSID="{D46C4792-3A66-4AB5-ABE1-638DB69FED93}"
+              DTS:DTSID="{FF236D4D-E805-4FFA-89B9-5CBD7565C7A9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -442,7 +442,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName=" GROUP"
-              DTS:DTSID="{6AFE5238-D326-43B0-BFF3-CE9B0C806844}"
+              DTS:DTSID="{14EC2888-0ED3-49BE-9634-0D0210D3012E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -451,7 +451,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName=" CRS ID USED"
-              DTS:DTSID="{A3F60448-3B3E-472B-B533-D05300DAEA47}"
+              DTS:DTSID="{25A136B0-F58E-4BA2-9BB9-81CA1C871950}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -460,7 +460,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName=" CRS HRS"
-              DTS:DTSID="{7EBADC9B-E7EC-4EEB-8571-C1D3F7B806A5}"
+              DTS:DTSID="{782DBA6D-9848-415B-B8BF-4A5061C0237B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -469,7 +469,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName=" TOT PGM HRS"
-              DTS:DTSID="{D35ABE91-72FF-4349-AB4F-8ADDA87B34AD}"
+              DTS:DTSID="{3D6295F6-2648-4A07-A7E0-1B9618CCD97C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -478,7 +478,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName=" TOT GEN-ED HRS"
-              DTS:DTSID="{15E348D8-0936-4CE6-93CD-995499588EE2}"
+              DTS:DTSID="{33C5FF44-E540-40A9-BB65-4462993A8BA5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -487,7 +487,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName=" TOT PROF HRS"
-              DTS:DTSID="{2FF316C4-86B0-4140-89BA-22C8E95DE8DA}"
+              DTS:DTSID="{16BA4DC9-A428-4325-8E4C-A7B875B71E2E}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -506,7 +506,7 @@
           DTS:LocaleID="1033"
           DTS:HeaderRowDelimiter="_x000D__x000A_"
           DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
           DTS:ConnectionString="Z:\Stuart\ConsoleApplications\SACSReports\data\October 2016\SACS Program Location Report Difference Report October 2016.csv">
           <DTS:FlatFileColumns>
@@ -517,7 +517,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="PGM CD"
-              DTS:DTSID="{894B5C48-AA9F-439D-84D2-D4D3BEB7C366}"
+              DTS:DTSID="{47768888-B496-4B3D-BF0D-E4C9F7A9C794}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -526,7 +526,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Award Type"
-              DTS:DTSID="{1FB48F9A-66AD-431F-8E1C-8D141C8BC017}"
+              DTS:DTSID="{F5544C80-3183-4E4A-BE64-D7BAFA001330}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -535,7 +535,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Program Title"
-              DTS:DTSID="{A0ECF896-96FD-46E1-A9CA-F7E7C5DB51B3}"
+              DTS:DTSID="{D141E7E3-4178-49CE-BB76-953F44F230E6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -544,7 +544,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CATALOG YEAR"
-              DTS:DTSID="{4E88D3D9-9A8C-4929-A9AE-0FA7DA35AF77}"
+              DTS:DTSID="{9304C267-E111-4FEF-9870-DDB6BB25FAD8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -553,7 +553,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CAMP CNTR"
-              DTS:DTSID="{076352ED-75C2-4548-87D5-03187AF8A407}"
+              DTS:DTSID="{679C8E3D-AE46-4F93-92A0-15E7C0BCBD08}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -562,7 +562,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Location Name"
-              DTS:DTSID="{33D3051F-641C-49FB-8713-A7DBD4B78164}"
+              DTS:DTSID="{4346AA5F-6980-4FFC-BF2F-C5F1A5C77157}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -571,7 +571,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CURRENT TOT PGM HRS"
-              DTS:DTSID="{C13FFC23-0F81-4DB1-9D0E-23EE791CDE29}"
+              DTS:DTSID="{51FFECE3-C32D-4C3F-B31D-824D1FFB5ED0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -580,7 +580,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CURRENT TOT GEN-ED HRS"
-              DTS:DTSID="{7DBC3AE9-B0F1-4B63-A787-40D16F33D1A2}"
+              DTS:DTSID="{6F4BF850-8516-400B-8ED6-09B39555BCA1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -589,7 +589,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CURRENT TOT PROF HRS"
-              DTS:DTSID="{01ABAC65-E454-427D-8644-29DB64203F12}"
+              DTS:DTSID="{CB000ACB-F3A9-462E-BFCA-71862C831B2F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -598,7 +598,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Change"
-              DTS:DTSID="{FA67FC87-0511-44ED-97B4-EA8292CB6FC6}"
+              DTS:DTSID="{98D41642-2D04-4DB0-9FD8-E38EB017C099}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -607,7 +607,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="PREVIOUS TOT PGM HRS"
-              DTS:DTSID="{D01FF571-91E8-4743-81AB-B41AD929B016}"
+              DTS:DTSID="{B74843DC-DCD4-48B9-BA2A-2651753621B0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -616,7 +616,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="PREV TOT GEN-ED HRS"
-              DTS:DTSID="{629E8ADB-680B-42F8-A154-9FFB1FE89FBE}"
+              DTS:DTSID="{10801535-2184-45FF-ADE3-F3FE9746C4C4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -625,7 +625,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="PREV TOT PROF HRS"
-              DTS:DTSID="{E1E83810-B485-48ED-ADC8-B8D35C22B342}"
+              DTS:DTSID="{40C33748-C95F-4490-A958-1657FC66F4CF}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -783,7 +783,7 @@
           DTS:HeaderRowDelimiter="_x000D__x000A_"
           DTS:ColumnNamesInFirstDataRow="True"
           DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
@@ -793,7 +793,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="PGM CD"
-              DTS:DTSID="{A555782D-141C-475B-8753-F4CBC57B36F8}"
+              DTS:DTSID="{CA13109E-3492-4DC9-9F0A-952A5AA105BD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -802,7 +802,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName=" AWD TYPE"
-              DTS:DTSID="{2BB02E63-50ED-4798-90DF-4B57182591E2}"
+              DTS:DTSID="{9632F1EA-70CB-4FD5-8546-71137C108E87}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -811,7 +811,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName=" CATALOG YEAR"
-              DTS:DTSID="{2A43DAE6-81EB-4818-A322-43F528D7B4F9}"
+              DTS:DTSID="{B2412B7F-6DD4-44ED-8D72-2B49A964F6D1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -820,7 +820,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName=" CAMP CNTR"
-              DTS:DTSID="{A0104129-674F-41F0-A25C-98C8C9DCC8BD}"
+              DTS:DTSID="{EC86F26B-C7CE-4182-ACF3-45389EB30FE5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -829,7 +829,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName=" TRM FROM"
-              DTS:DTSID="{259DC48F-0A93-454E-B307-46641D51612D}"
+              DTS:DTSID="{A31FB6BD-2AEE-4942-BAD9-8127DF8D81FA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -838,7 +838,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName=" TRM TO"
-              DTS:DTSID="{C2B13FD2-77AB-4A72-BE2B-ABE463095B79}"
+              DTS:DTSID="{C427EF88-B9F3-49A8-84B8-95003C2FC6AE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -847,7 +847,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName=" AREA"
-              DTS:DTSID="{86DFFCED-673B-4494-AC48-9E2B024F105D}"
+              DTS:DTSID="{1452FF2F-9367-45E8-A6BA-A62D94794240}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -856,7 +856,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName=" GROUP"
-              DTS:DTSID="{FD5F8CF0-2B9B-4857-A7C1-CCE5640E7085}"
+              DTS:DTSID="{1A63982D-3985-4749-BC20-69B5713ACAD9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -865,7 +865,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName=" CRS ID USED"
-              DTS:DTSID="{277D5454-B69E-426B-A996-3A3599E73163}"
+              DTS:DTSID="{96FA8F33-0EFC-4DEF-A4C1-4BB587288E7A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -874,7 +874,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName=" CRS HRS"
-              DTS:DTSID="{2F95E1E3-AF1B-4E95-AA8E-BCFBB3CBC786}"
+              DTS:DTSID="{C631E4B3-3C85-4A66-B052-5607368D1057}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -883,7 +883,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName=" TOT PGM HRS"
-              DTS:DTSID="{6D2F75C1-8026-43CD-A9F6-BD95921A3047}"
+              DTS:DTSID="{26D2260A-37C4-42AD-9493-0D96499A6B8C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -892,7 +892,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName=" TOT GEN-ED HRS"
-              DTS:DTSID="{4C9871FD-1F74-4645-A7BF-BAC4761EC531}"
+              DTS:DTSID="{A37D044A-F548-4647-AAA7-88E37FAAD716}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -901,7 +901,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName=" TOT PROF HRS"
-              DTS:DTSID="{A133A933-28C8-499B-B0F9-32471AE5FC04}"
+              DTS:DTSID="{2BC16A28-07BF-48E6-99B2-3CD31CE926ED}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -3795,7 +3795,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Execute Process Task"
       DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:PropertyExpression
         DTS:Name="Arguments">"-m " + @minTerm + " -x " + @maxTerm + " -o " + @month + " -y " + @year</DTS:PropertyExpression>
@@ -3817,7 +3817,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Execute Process Task 1"
       DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:PropertyExpression
         DTS:Name="Arguments">"-m " + @minTerm + " -x " + @maxTerm + " -o " + @month + " -y " + @year</DTS:PropertyExpression>
@@ -4809,6 +4809,187 @@
               </outputs>
             </component>
             <component
+              refId="Package\PLR Differences\Derived Column 1"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\PLR Differences\Derived Column 1.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\PLR Differences\Derived Column 1.Inputs[Derived Column Input].Columns[PGM_OFFCL_TTL]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="PGM_OFFCL_TTL"
+                      lineageId="Package\PLR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[PGM_OFFCL_TTL]" />
+                    <inputColumn
+                      refId="Package\PLR Differences\Derived Column 1.Inputs[Derived Column Input].Columns[PGM_TRK_TTL]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="PGM_TRK_TTL"
+                      lineageId="Package\PLR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[PGM_TRK_TTL]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\PLR Differences\Derived Column 1.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\PLR Differences\Derived Column 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\PLR Differences\Derived Column 1.Outputs[Derived Column Output].Columns[Derived Column 1]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\PLR Differences\Derived Column 1.Outputs[Derived Column Output].Columns[Derived Column 1]"
+                      name="Derived Column 1"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,100,1252)[REPLACENULL](#{Package\PLR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[PGM_OFFCL_TTL]},#{Package\PLR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[PGM_TRK_TTL]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,100,1252)REPLACENULL(PGM_OFFCL_TTL,PGM_TRK_TTL)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\PLR Differences\Derived Column 1.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\PLR Differences\Derived Column 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\PLR Differences\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\PLR Differences\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\PLR Differences\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\PLR Differences\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\PLR Differences\Derived Column 2"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column 2"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\PLR Differences\Derived Column 2.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\PLR Differences\Derived Column 2.Inputs[Derived Column Input].Columns[SITE_LOCAL_NUM]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="SITE_LOCAL_NUM"
+                      lineageId="Package\PLR Differences\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[SITE_LOCAL_NUM]" />
+                    <inputColumn
+                      refId="Package\PLR Differences\Derived Column 2.Inputs[Derived Column Input].Columns[LOCATION_NUM]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="LOCATION_NUM"
+                      lineageId="Package\PLR Differences\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[LOCATION_NUM]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\PLR Differences\Derived Column 2.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\PLR Differences\Derived Column 2.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\PLR Differences\Derived Column 2.Outputs[Derived Column Output].Columns[CampusCenter]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="5"
+                      lineageId="Package\PLR Differences\Derived Column 2.Outputs[Derived Column Output].Columns[CampusCenter]"
+                      name="CampusCenter"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\PLR Differences\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[SITE_LOCAL_NUM]} + #{Package\PLR Differences\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[LOCATION_NUM]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">SITE_LOCAL_NUM + LOCATION_NUM</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\PLR Differences\Derived Column 2.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\PLR Differences\Derived Column 2.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\PLR Differences\Derived Column 2.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\PLR Differences\Derived Column 2.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\PLR Differences\Derived Column 2.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\PLR Differences\Derived Column 2.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\PLR Differences\Flat File Destination"
               componentClassID="Microsoft.FlatFileDestination"
               contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
@@ -4821,10 +5002,10 @@
                   description="Specifies whether the data will overwrite or append to the destination file."
                   name="Overwrite">true</property>
                 <property
-                  dataType="System.Null"
+                  dataType="System.String"
                   description="Specifies the text to write to the destination file before any data is written."
                   expressionType="Notify"
-                  name="Header" />
+                  name="Header">"Program Code","Award Type","Program Title","Catalog Year","Campus Center Code","Campus Center Name","Current Total Program Hours","Current General Education Hours","Current Total Core and Professional Core Hours","Change","Previous Total Program Hours","Previous Total General Education Hours","Previous Total Core and Professional Core Hours"</property>
               </properties>
               <connections>
                 <connection
@@ -4845,7 +5026,6 @@
                       cachedDataType="str"
                       cachedLength="10"
                       cachedName="PGM CD"
-                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\PLR Differences\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PGM CD]"
                       lineageId="Package\PLR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[PGM CD]" />
                     <inputColumn
@@ -4862,6 +5042,7 @@
                       cachedDataType="str"
                       cachedLength="10"
                       cachedName="CAMP CNTR"
+                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\PLR Differences\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CAMP CNTR]"
                       lineageId="Package\PLR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[CAMP CNTR]" />
                     <inputColumn
@@ -4927,6 +5108,22 @@
                       cachedName="AWD TYPE"
                       externalMetadataColumnId="Package\PLR Differences\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Award Type]"
                       lineageId="Package\PLR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[AWD TYPE]" />
+                    <inputColumn
+                      refId="Package\PLR Differences\Flat File Destination.Inputs[Flat File Destination Input].Columns[LOCATION_NAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="LOCATION_NAME"
+                      externalMetadataColumnId="Package\PLR Differences\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Location Name]"
+                      lineageId="Package\PLR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[LOCATION_NAME]" />
+                    <inputColumn
+                      refId="Package\PLR Differences\Flat File Destination.Inputs[Flat File Destination Input].Columns[Derived Column 1]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="Derived Column 1"
+                      externalMetadataColumnId="Package\PLR Differences\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Program Title]"
+                      lineageId="Package\PLR Differences\Derived Column 1.Outputs[Derived Column Output].Columns[Derived Column 1]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -5592,6 +5789,20 @@
                       cachedName="EFF_TRM_D"
                       cachedSortKeyPosition="2"
                       lineageId="Package\PLR Differences\Sort 2.Outputs[Sort Output].Columns[EFF_TRM_D]" />
+                    <inputColumn
+                      refId="Package\PLR Differences\Merge Join 1.Inputs[Merge Join Right Input].Columns[PGM_OFFCL_TTL]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="PGM_OFFCL_TTL"
+                      lineageId="Package\PLR Differences\Sort 2.Outputs[Sort Output].Columns[PGM_OFFCL_TTL]" />
+                    <inputColumn
+                      refId="Package\PLR Differences\Merge Join 1.Inputs[Merge Join Right Input].Columns[PGM_TRK_TTL]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="PGM_TRK_TTL"
+                      lineageId="Package\PLR Differences\Sort 2.Outputs[Sort Output].Columns[PGM_TRK_TTL]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -5768,6 +5979,36 @@
                           name="InputColumnID">#{Package\PLR Differences\Merge Join 1.Inputs[Merge Join Left Input].Columns[Change]}</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\PLR Differences\Merge Join 1.Outputs[Merge Join Output].Columns[PGM_OFFCL_TTL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      lineageId="Package\PLR Differences\Merge Join 1.Outputs[Merge Join Output].Columns[PGM_OFFCL_TTL]"
+                      name="PGM_OFFCL_TTL">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\PLR Differences\Merge Join 1.Inputs[Merge Join Right Input].Columns[PGM_OFFCL_TTL]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\PLR Differences\Merge Join 1.Outputs[Merge Join Output].Columns[PGM_TRK_TTL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      lineageId="Package\PLR Differences\Merge Join 1.Outputs[Merge Join Output].Columns[PGM_TRK_TTL]"
+                      name="PGM_TRK_TTL">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\PLR Differences\Merge Join 1.Inputs[Merge Join Right Input].Columns[PGM_TRK_TTL]}</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -5811,7 +6052,7 @@
                       cachedDataType="str"
                       cachedLength="10"
                       cachedName="PGM CD"
-                      cachedSortKeyPosition="1"
+                      cachedSortKeyPosition="3"
                       lineageId="Package\PLR Differences\Sort 5.Outputs[Sort Output].Columns[PGM CD]" />
                     <inputColumn
                       refId="Package\PLR Differences\Merge Join 2.Inputs[Merge Join Left Input].Columns[CATALOG YEAR]"
@@ -5827,7 +6068,7 @@
                       cachedDataType="str"
                       cachedLength="10"
                       cachedName="CAMP CNTR"
-                      cachedSortKeyPosition="3"
+                      cachedSortKeyPosition="1"
                       lineageId="Package\PLR Differences\Sort 5.Outputs[Sort Output].Columns[CAMP CNTR]" />
                     <inputColumn
                       refId="Package\PLR Differences\Merge Join 2.Inputs[Merge Join Left Input].Columns[CURRENT TOT PROF HRS]"
@@ -5884,6 +6125,22 @@
                       cachedLength="9"
                       cachedName="Change"
                       lineageId="Package\PLR Differences\Sort 5.Outputs[Sort Output].Columns[Change]" />
+                    <inputColumn
+                      refId="Package\PLR Differences\Merge Join 2.Inputs[Merge Join Left Input].Columns[PGM_OFFCL_TTL]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="PGM_OFFCL_TTL"
+                      cachedSortKeyPosition="4"
+                      lineageId="Package\PLR Differences\Sort 5.Outputs[Sort Output].Columns[PGM_OFFCL_TTL]" />
+                    <inputColumn
+                      refId="Package\PLR Differences\Merge Join 2.Inputs[Merge Join Left Input].Columns[PGM_TRK_TTL]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="PGM_TRK_TTL"
+                      cachedSortKeyPosition="5"
+                      lineageId="Package\PLR Differences\Sort 5.Outputs[Sort Output].Columns[PGM_TRK_TTL]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -5893,13 +6150,35 @@
                   name="Merge Join Right Input">
                   <inputColumns>
                     <inputColumn
+                      refId="Package\PLR Differences\Merge Join 2.Inputs[Merge Join Right Input].Columns[LOCATION_NAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="LOCATION_NAME"
+                      lineageId="Package\PLR Differences\Sort 4.Outputs[Sort Output].Columns[LOCATION_NAME]" />
+                    <inputColumn
+                      refId="Package\PLR Differences\Merge Join 2.Inputs[Merge Join Right Input].Columns[SITE_LOCAL_NUM]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="SITE_LOCAL_NUM"
+                      cachedSortKeyPosition="3"
+                      lineageId="Package\PLR Differences\Sort 4.Outputs[Sort Output].Columns[SITE_LOCAL_NUM]" />
+                    <inputColumn
                       refId="Package\PLR Differences\Merge Join 2.Inputs[Merge Join Right Input].Columns[LOCATION_NUM]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="4"
                       cachedName="LOCATION_NUM"
-                      cachedSortKeyPosition="1"
+                      cachedSortKeyPosition="2"
                       lineageId="Package\PLR Differences\Sort 4.Outputs[Sort Output].Columns[LOCATION_NUM]" />
+                    <inputColumn
+                      refId="Package\PLR Differences\Merge Join 2.Inputs[Merge Join Right Input].Columns[CampusCenter]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="CampusCenter"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\PLR Differences\Sort 4.Outputs[Sort Output].Columns[CampusCenter]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -5916,8 +6195,7 @@
                       dataType="str"
                       length="10"
                       lineageId="Package\PLR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[PGM CD]"
-                      name="PGM CD"
-                      sortKeyPosition="1">
+                      name="PGM CD">
                       <properties>
                         <property
                           containsID="true"
@@ -5947,7 +6225,8 @@
                       dataType="str"
                       length="10"
                       lineageId="Package\PLR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[CAMP CNTR]"
-                      name="CAMP CNTR">
+                      name="CAMP CNTR"
+                      sortKeyPosition="1">
                       <properties>
                         <property
                           containsID="true"
@@ -6073,6 +6352,51 @@
                           dataType="System.Int32"
                           description="The input column associated with this output column"
                           name="InputColumnID">#{Package\PLR Differences\Merge Join 2.Inputs[Merge Join Left Input].Columns[Change]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\PLR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[LOCATION_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\PLR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[LOCATION_NAME]"
+                      name="LOCATION_NAME">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\PLR Differences\Merge Join 2.Inputs[Merge Join Right Input].Columns[LOCATION_NAME]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\PLR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[PGM_OFFCL_TTL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      lineageId="Package\PLR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[PGM_OFFCL_TTL]"
+                      name="PGM_OFFCL_TTL">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\PLR Differences\Merge Join 2.Inputs[Merge Join Left Input].Columns[PGM_OFFCL_TTL]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\PLR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[PGM_TRK_TTL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      lineageId="Package\PLR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[PGM_TRK_TTL]"
+                      name="PGM_TRK_TTL">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\PLR Differences\Merge Join 2.Inputs[Merge Join Left Input].Columns[PGM_TRK_TTL]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -11262,7 +11586,7 @@
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the Sort transformation removes rows with duplicate sort values."
-                  name="EliminateDuplicates">false</property>
+                  name="EliminateDuplicates">true</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the maximum number of threads to use for sorting."
@@ -16115,7 +16439,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          name="NewSortKeyPosition">3</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -16133,7 +16457,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">1</property>
+                          name="NewSortKeyPosition">2</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -16384,6 +16708,23 @@
                           name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\PLR Differences\Sort 4.Inputs[Sort Input].Columns[CampusCenter]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="CampusCenter"
+                      lineageId="Package\PLR Differences\Derived Column 2.Outputs[Derived Column Output].Columns[CampusCenter]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -16546,7 +16887,8 @@
                       dataType="str"
                       length="1"
                       lineageId="Package\PLR Differences\Sort 4.Outputs[Sort Output].Columns[SITE_LOCAL_NUM]"
-                      name="SITE_LOCAL_NUM">
+                      name="SITE_LOCAL_NUM"
+                      sortKeyPosition="3">
                       <properties>
                         <property
                           containsID="true"
@@ -16562,7 +16904,7 @@
                       length="4"
                       lineageId="Package\PLR Differences\Sort 4.Outputs[Sort Output].Columns[LOCATION_NUM]"
                       name="LOCATION_NUM"
-                      sortKeyPosition="1">
+                      sortKeyPosition="2">
                       <properties>
                         <property
                           containsID="true"
@@ -16777,6 +17119,21 @@
                           name="SortColumnId">#{Package\PLR Differences\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[SDB_PRISON_IND]}</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\PLR Differences\Sort 4.Outputs[Sort Output].Columns[CampusCenter]"
+                      dataType="wstr"
+                      length="5"
+                      lineageId="Package\PLR Differences\Sort 4.Outputs[Sort Output].Columns[CampusCenter]"
+                      name="CampusCenter"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\PLR Differences\Derived Column 2.Outputs[Derived Column Output].Columns[CampusCenter]}</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -16821,7 +17178,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">1</property>
+                          name="NewSortKeyPosition">3</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -16858,7 +17215,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">3</property>
+                          name="NewSortKeyPosition">1</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -17004,6 +17361,42 @@
                           name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\PLR Differences\Sort 5.Inputs[Sort Input].Columns[PGM_OFFCL_TTL]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="PGM_OFFCL_TTL"
+                      lineageId="Package\PLR Differences\Merge Join 1.Outputs[Merge Join Output].Columns[PGM_OFFCL_TTL]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">4</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\PLR Differences\Sort 5.Inputs[Sort Input].Columns[PGM_TRK_TTL]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="PGM_TRK_TTL"
+                      lineageId="Package\PLR Differences\Merge Join 1.Outputs[Merge Join Output].Columns[PGM_TRK_TTL]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">5</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -17021,7 +17414,7 @@
                       length="10"
                       lineageId="Package\PLR Differences\Sort 5.Outputs[Sort Output].Columns[PGM CD]"
                       name="PGM CD"
-                      sortKeyPosition="1">
+                      sortKeyPosition="3">
                       <properties>
                         <property
                           containsID="true"
@@ -17053,7 +17446,7 @@
                       length="10"
                       lineageId="Package\PLR Differences\Sort 5.Outputs[Sort Output].Columns[CAMP CNTR]"
                       name="CAMP CNTR"
-                      sortKeyPosition="3">
+                      sortKeyPosition="1">
                       <properties>
                         <property
                           containsID="true"
@@ -17181,6 +17574,38 @@
                           name="SortColumnId">#{Package\PLR Differences\Merge Join 1.Outputs[Merge Join Output].Columns[Change]}</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\PLR Differences\Sort 5.Outputs[Sort Output].Columns[PGM_OFFCL_TTL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      lineageId="Package\PLR Differences\Sort 5.Outputs[Sort Output].Columns[PGM_OFFCL_TTL]"
+                      name="PGM_OFFCL_TTL"
+                      sortKeyPosition="4">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\PLR Differences\Merge Join 1.Outputs[Merge Join Output].Columns[PGM_OFFCL_TTL]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\PLR Differences\Sort 5.Outputs[Sort Output].Columns[PGM_TRK_TTL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      lineageId="Package\PLR Differences\Sort 5.Outputs[Sort Output].Columns[PGM_TRK_TTL]"
+                      name="PGM_TRK_TTL"
+                      sortKeyPosition="5">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\PLR Differences\Merge Join 1.Outputs[Merge Join Output].Columns[PGM_TRK_TTL]}</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -17198,6 +17623,16 @@
               endId="Package\PLR Differences\Aggregate.Inputs[Aggregate Input 1]"
               name="Derived Column Output"
               startId="Package\PLR Differences\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\PLR Differences.Paths[Derived Column Output2]"
+              endId="Package\PLR Differences\Sort 4.Inputs[Sort Input]"
+              name="Derived Column Output"
+              startId="Package\PLR Differences\Derived Column 2.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\PLR Differences.Paths[Derived Column Output1]"
+              endId="Package\PLR Differences\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="Derived Column Output"
+              startId="Package\PLR Differences\Derived Column 1.Outputs[Derived Column Output]" />
             <path
               refId="Package\PLR Differences.Paths[Flat File Source Output]"
               endId="Package\PLR Differences\Sort.Inputs[Sort Input]"
@@ -17220,7 +17655,7 @@
               startId="Package\PLR Differences\Merge Join 1.Outputs[Merge Join Output]" />
             <path
               refId="Package\PLR Differences.Paths[Merge Join Output2]"
-              endId="Package\PLR Differences\Flat File Destination.Inputs[Flat File Destination Input]"
+              endId="Package\PLR Differences\Derived Column 1.Inputs[Derived Column Input]"
               name="Merge Join Output"
               startId="Package\PLR Differences\Merge Join 2.Outputs[Merge Join Output]" />
             <path
@@ -17230,29 +17665,29 @@
               startId="Package\PLR Differences\OLE DB Source.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\PLR Differences.Paths[OLE DB Source Output1]"
-              endId="Package\PLR Differences\Sort 4.Inputs[Sort Input]"
+              endId="Package\PLR Differences\Derived Column 2.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
               startId="Package\PLR Differences\OLE DB Source 1.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\PLR Differences.Paths[Sort Output]"
-              endId="Package\PLR Differences\Merge Join.Inputs[Merge Join Left Input]"
-              name="Sort Output"
-              startId="Package\PLR Differences\Sort.Outputs[Sort Output]" />
             <path
               refId="Package\PLR Differences.Paths[Sort Output1]"
               endId="Package\PLR Differences\Merge Join.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\PLR Differences\Sort 1.Outputs[Sort Output]" />
             <path
+              refId="Package\PLR Differences.Paths[Sort Output3]"
+              endId="Package\PLR Differences\Merge Join 1.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\PLR Differences\Sort 2.Outputs[Sort Output]" />
+            <path
               refId="Package\PLR Differences.Paths[Sort Output2]"
               endId="Package\PLR Differences\Merge Join 1.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\PLR Differences\Sort 3.Outputs[Sort Output]" />
             <path
-              refId="Package\PLR Differences.Paths[Sort Output3]"
-              endId="Package\PLR Differences\Merge Join 1.Inputs[Merge Join Right Input]"
+              refId="Package\PLR Differences.Paths[Sort Output]"
+              endId="Package\PLR Differences\Merge Join.Inputs[Merge Join Left Input]"
               name="Sort Output"
-              startId="Package\PLR Differences\Sort 2.Outputs[Sort Output]" />
+              startId="Package\PLR Differences\Sort.Outputs[Sort Output]" />
             <path
               refId="Package\PLR Differences.Paths[Sort Output4]"
               endId="Package\PLR Differences\Merge Join 2.Inputs[Merge Join Left Input]"
@@ -17285,6 +17720,15 @@
           Language="CSharp"
           ReadOnlyVariables="User::month,User::year"
           ReadWriteVariables="User::currCDMRData,User::currPLHRData,User::currPLRData,User::prevCDMRData,User::prevPLHRData,User::prevPLRData">
+          <ProjectItem
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -17404,35 +17848,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 </root>]]></ProjectItem>
-          <ProjectItem
-            Name="Properties\Settings.Designer.cs"
-            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_81d70baa5cd04720b3fe6260c0d2174d.Properties.Settings.get_Default():ST_81d70baa5cd04720b3fe6260c0d2174d.Properties.Sett" +
-    "ings")]
-
-namespace ST_81d70baa5cd04720b3fe6260c0d2174d.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
           <ProjectItem
             Name="ScriptMain.cs"
             Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
@@ -17644,35 +18059,34 @@ namespace ST_81d70baa5cd04720b3fe6260c0d2174d
 	</msb:ItemGroup>
 </c:Project>]]></ProjectItem>
           <ProjectItem
-            Name="Properties\AssemblyInfo.cs"
-            Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
+            Name="Properties\Settings.Designer.cs"
+            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
 
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_81d70baa5cd04720b3fe6260c0d2174d")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_81d70baa5cd04720b3fe6260c0d2174d")]
-[assembly: AssemblyCopyright("Copyright @  2016")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_81d70baa5cd04720b3fe6260c0d2174d.Properties.Settings.get_Default():ST_81d70baa5cd04720b3fe6260c0d2174d.Properties.Sett" +
+    "ings")]
 
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+namespace ST_81d70baa5cd04720b3fe6260c0d2174d.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
           <ProjectItem
             Name="ST_81d70baa5cd04720b3fe6260c0d2174d.csproj"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -17774,14 +18188,35 @@ using System.Runtime.CompilerServices;
   </ProjectExtensions>
 </Project>]]></ProjectItem>
           <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_81d70baa5cd04720b3fe6260c0d2174d")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_81d70baa5cd04720b3fe6260c0d2174d")]
+[assembly: AssemblyCopyright("Copyright @  2016")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -18260,6 +18695,28 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\CDM Differences.Paths[Derived Column Output]"
+          TopLeft="373,327">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31"
+              Start="0,0"
+              End="0,23.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\CDM Differences.Paths[Sort Output1]"
           TopLeft="511.5,186">
           <EdgeLayout.Curve>
@@ -18371,20 +18828,104 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\PLR Differences">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="172,42"
+          Id="Package\PLR Differences\Flat File Destination"
+          TopLeft="21,602" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\PLR Differences\Merge Join"
+          TopLeft="336,290" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\PLR Differences\Merge Join 2"
+          TopLeft="415,628" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\PLR Differences\OLE DB Source"
+          TopLeft="272,356" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\PLR Differences\Derived Column"
+          TopLeft="72,294" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\PLR Differences\Sort 1"
+          TopLeft="669,317" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\PLR Differences\OLE DB Source 1"
+          TopLeft="436,419" />
+        <NodeLayout
+          Size="98,42"
+          Id="Package\PLR Differences\Sort"
+          TopLeft="440,231" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\PLR Differences\Merge Join 1"
+          TopLeft="184,509" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\PLR Differences\Sort 3"
+          TopLeft="90,441" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\PLR Differences\Sort 5"
+          TopLeft="295,562" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\PLR Differences\Sort 4"
+          TopLeft="400,496" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\PLR Differences\Sort 2"
+          TopLeft="281,439" />
+        <NodeLayout
+          Size="144,42"
+          Id="Package\PLR Differences\Previous Data"
+          TopLeft="789,254" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\PLR Differences\Current Data"
+          TopLeft="578,255" />
+        <NodeLayout
+          Size="127,42"
+          Id="Package\PLR Differences\Aggregate"
+          TopLeft="80,375" />
         <EdgeLayout
-          Id="Package\CDM Differences.Paths[Derived Column Output]"
-          TopLeft="373,327">
+          Id="Package\PLR Differences.Paths[Sort Output4]"
+          TopLeft="348.5,604">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,31"
+              EndConnector="114.166666666667,24"
               Start="0,0"
-              End="0,23.5">
+              End="114.166666666667,16.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23.5" />
+                    End="0,10.2361308677098" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.2361308677098"
+                    Point2="0,14.2361308677098"
+                    Point3="4,14.2361308677098" />
+                  <mssgle:LineSegment
+                    End="110.166666666667,14.2361308677098" />
+                  <mssgle:CubicBezierSegment
+                    Point1="110.166666666667,14.2361308677098"
+                    Point2="114.166666666667,14.2361308677098"
+                    Point3="114.166666666667,18.2361308677098" />
+                  <mssgle:LineSegment
+                    End="114.166666666667,16.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -18393,46 +18934,220 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
-    design-time-name="Package\PLR Differences">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="144,42"
-          Id="Package\PLR Differences\Previous Data"
-          TopLeft="789,254" />
-        <NodeLayout
-          Size="172,42"
-          Id="Package\PLR Differences\Flat File Destination"
-          TopLeft="68,622" />
-        <NodeLayout
-          Size="107,42"
-          Id="Package\PLR Differences\Sort 1"
-          TopLeft="669,317" />
-        <NodeLayout
-          Size="139,42"
-          Id="Package\PLR Differences\Current Data"
-          TopLeft="578,255" />
-        <NodeLayout
-          Size="98,42"
-          Id="Package\PLR Differences\Sort"
-          TopLeft="440,231" />
-        <NodeLayout
-          Size="130,42"
-          Id="Package\PLR Differences\Merge Join"
-          TopLeft="336,290" />
-        <NodeLayout
-          Size="154,42"
-          Id="Package\PLR Differences\Derived Column"
-          TopLeft="72,294" />
-        <NodeLayout
-          Size="127,42"
-          Id="Package\PLR Differences\Aggregate"
-          TopLeft="80,375" />
+        <EdgeLayout
+          Id="Package\PLR Differences.Paths[Sort Output3]"
+          TopLeft="334.5,481">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-59.1666666666667,28"
+              Start="0,0"
+              End="-59.1666666666667,20.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.6088193456615" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.6088193456615"
+                    Point2="0,16.6088193456615"
+                    Point3="-4,16.6088193456615" />
+                  <mssgle:LineSegment
+                    End="-55.1666666666667,16.6088193456615" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-55.1666666666667,16.6088193456615"
+                    Point2="-59.1666666666667,16.6088193456615"
+                    Point3="-59.1666666666667,20.6088193456615" />
+                  <mssgle:LineSegment
+                    End="-59.1666666666667,20.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\PLR Differences.Paths[Sort Output2]"
+          TopLeft="143.5,483">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="110,26"
+              Start="0,0"
+              End="110,18.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,9" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9"
+                    Point2="0,13"
+                    Point3="4,13" />
+                  <mssgle:LineSegment
+                    End="106,13" />
+                  <mssgle:CubicBezierSegment
+                    Point1="106,13"
+                    Point2="110,13"
+                    Point3="110,17" />
+                  <mssgle:LineSegment
+                    End="110,18.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\PLR Differences.Paths[Sort Output1]"
+          TopLeft="669,338">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-203,-32.6666666666667"
+              Start="0,0"
+              End="-195.5,-32.6666666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-113.330275229358,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-113.330275229358,0"
+                    Point2="-117.330275229358,0"
+                    Point3="-117.330275229358,-4" />
+                  <mssgle:LineSegment
+                    End="-117.330275229358,-28.6666666666667" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-117.330275229358,-28.6666666666667"
+                    Point2="-117.330275229358,-32.6666666666667"
+                    Point3="-121.330275229358,-32.6666666666667" />
+                  <mssgle:LineSegment
+                    End="-195.5,-32.6666666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\PLR Differences.Paths[Sort Output]"
+          TopLeft="440,252">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-39,38"
+              Start="0,0"
+              End="-39,30.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-35,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-35,0"
+                    Point2="-39,0"
+                    Point3="-39,4" />
+                  <mssgle:LineSegment
+                    End="-39,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\PLR Differences.Paths[OLE DB Source Output]"
+          TopLeft="347,398">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-12.5,41"
+              Start="0,0"
+              End="-12.5,33.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.5"
+                    Point2="0,20.5"
+                    Point3="-4,20.5" />
+                  <mssgle:LineSegment
+                    End="-8.5,20.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-8.5,20.5"
+                    Point2="-12.5,20.5"
+                    Point3="-12.5,24.5" />
+                  <mssgle:LineSegment
+                    End="-12.5,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\PLR Differences.Paths[Merge Join Output1]"
+          TopLeft="323,530">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="25.5,32"
+              Start="0,0"
+              End="25.5,24.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="21.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="21.5,0"
+                    Point2="25.5,0"
+                    Point3="25.5,4" />
+                  <mssgle:LineSegment
+                    End="25.5,24.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\PLR Differences.Paths[Merge Join Output]"
+          TopLeft="336,313">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-110,0"
+              Start="0,0"
+              End="-102.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-102.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\PLR Differences.Paths[Flat File Source Output1]"
           TopLeft="789,275">
@@ -18518,106 +19233,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\PLR Differences.Paths[Sort Output1]"
-          TopLeft="669,338">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-203,-32.6666666666667"
-              Start="0,0"
-              End="-195.5,-32.6666666666667">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-113.330275229358,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-113.330275229358,0"
-                    Point2="-117.330275229358,0"
-                    Point3="-117.330275229358,-4" />
-                  <mssgle:LineSegment
-                    End="-117.330275229358,-28.6666666666667" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-117.330275229358,-28.6666666666667"
-                    Point2="-117.330275229358,-32.6666666666667"
-                    Point3="-121.330275229358,-32.6666666666667" />
-                  <mssgle:LineSegment
-                    End="-195.5,-32.6666666666667" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\PLR Differences.Paths[Sort Output]"
-          TopLeft="440,252">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-39,38"
-              Start="0,0"
-              End="-39,30.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-35,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-35,0"
-                    Point2="-39,0"
-                    Point3="-39,4" />
-                  <mssgle:LineSegment
-                    End="-39,30.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\PLR Differences.Paths[Merge Join Output]"
-          TopLeft="336,313">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-110,0"
-              Start="0,0"
-              End="-102.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-102.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="150,42"
-          Id="Package\PLR Differences\OLE DB Source"
-          TopLeft="272,355" />
-        <NodeLayout
-          Size="159,42"
-          Id="Package\PLR Differences\OLE DB Source 1"
-          TopLeft="436,419" />
-        <NodeLayout
-          Size="107,42"
-          Id="Package\PLR Differences\Sort 2"
-          TopLeft="281,439" />
-        <NodeLayout
-          Size="107,42"
-          Id="Package\PLR Differences\Sort 3"
-          TopLeft="90,441" />
-        <EdgeLayout
           Id="Package\PLR Differences.Paths[Aggregate Output 1]"
           TopLeft="143.5,417">
           <EdgeLayout.Curve>
@@ -18639,32 +19254,70 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="163,42"
+          Id="Package\PLR Differences\Derived Column 1"
+          TopLeft="225,655" />
         <EdgeLayout
-          Id="Package\PLR Differences.Paths[OLE DB Source Output]"
-          TopLeft="347,397">
+          Id="Package\PLR Differences.Paths[Merge Join Output2]"
+          TopLeft="415,649">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-12.5,42"
+              EndConnector="-27,27"
               Start="0,0"
-              End="-12.5,34.5">
+              End="-19.5,27">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17" />
+                    End="-9.5,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,17"
-                    Point2="0,21"
-                    Point3="-4,21" />
+                    Point1="-9.5,0"
+                    Point2="-13.5,0"
+                    Point3="-13.5,4" />
                   <mssgle:LineSegment
-                    End="-8.5,21" />
+                    End="-13.5,23" />
                   <mssgle:CubicBezierSegment
-                    Point1="-8.5,21"
-                    Point2="-12.5,21"
-                    Point3="-12.5,25" />
+                    Point1="-13.5,23"
+                    Point2="-13.5,27"
+                    Point3="-17.5,27" />
                   <mssgle:LineSegment
-                    End="-12.5,34.5" />
+                    End="-19.5,27" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\PLR Differences.Paths[Derived Column Output1]"
+          TopLeft="225,676">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-32,-53"
+              Start="0,0"
+              End="-24.5,-53">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-12,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-12,0"
+                    Point2="-16,0"
+                    Point3="-16,-4" />
+                  <mssgle:LineSegment
+                    End="-16,-49" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-16,-49"
+                    Point2="-16,-53"
+                    Point3="-20,-53" />
+                  <mssgle:LineSegment
+                    End="-24.5,-53" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -18674,107 +19327,35 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="139,42"
-          Id="Package\PLR Differences\Merge Join 1"
-          TopLeft="184,509" />
-        <EdgeLayout
-          Id="Package\PLR Differences.Paths[Sort Output2]"
-          TopLeft="143.5,483">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="110,26"
-              Start="0,0"
-              End="110,18.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,9" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,9"
-                    Point2="0,13"
-                    Point3="4,13" />
-                  <mssgle:LineSegment
-                    End="106,13" />
-                  <mssgle:CubicBezierSegment
-                    Point1="106,13"
-                    Point2="110,13"
-                    Point3="110,17" />
-                  <mssgle:LineSegment
-                    End="110,18.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\PLR Differences.Paths[Sort Output3]"
-          TopLeft="334.5,481">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-59.1666666666667,28"
-              Start="0,0"
-              End="-59.1666666666667,20.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,12.6088193456615" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,12.6088193456615"
-                    Point2="0,16.6088193456615"
-                    Point3="-4,16.6088193456615" />
-                  <mssgle:LineSegment
-                    End="-55.1666666666667,16.6088193456615" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-55.1666666666667,16.6088193456615"
-                    Point2="-59.1666666666667,16.6088193456615"
-                    Point3="-59.1666666666667,20.6088193456615" />
-                  <mssgle:LineSegment
-                    End="-59.1666666666667,20.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="107,42"
-          Id="Package\PLR Differences\Sort 4"
-          TopLeft="400,496" />
+          Size="163,42"
+          Id="Package\PLR Differences\Derived Column 2"
+          TopLeft="527,547" />
         <EdgeLayout
           Id="Package\PLR Differences.Paths[OLE DB Source Output1]"
           TopLeft="515.5,461">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-62,35"
+              EndConnector="93,86"
               Start="0,0"
-              End="-62,27.5">
+              End="93,78.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,13.5" />
+                    End="0,39" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,13.5"
-                    Point2="0,17.5"
-                    Point3="-4,17.5" />
+                    Point1="0,39"
+                    Point2="0,43"
+                    Point3="4,43" />
                   <mssgle:LineSegment
-                    End="-58,17.5" />
+                    End="89,43" />
                   <mssgle:CubicBezierSegment
-                    Point1="-58,17.5"
-                    Point2="-62,17.5"
-                    Point3="-62,21.5" />
+                    Point1="89,43"
+                    Point2="93,43"
+                    Point3="93,47" />
                   <mssgle:LineSegment
-                    End="-62,27.5" />
+                    End="93,78.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -18783,68 +19364,26 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="107,42"
-          Id="Package\PLR Differences\Sort 5"
-          TopLeft="295,562" />
         <EdgeLayout
-          Id="Package\PLR Differences.Paths[Merge Join Output1]"
-          TopLeft="323,530">
+          Id="Package\PLR Differences.Paths[Derived Column Output2]"
+          TopLeft="527,568">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="25.5,32"
+              EndConnector="-57,-30"
               Start="0,0"
-              End="25.5,24.5">
+              End="-57,-22.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="21.5,0" />
+                    End="-53,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="21.5,0"
-                    Point2="25.5,0"
-                    Point3="25.5,4" />
+                    Point1="-53,0"
+                    Point2="-57,0"
+                    Point3="-57,-4" />
                   <mssgle:LineSegment
-                    End="25.5,24.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="139,42"
-          Id="Package\PLR Differences\Merge Join 2"
-          TopLeft="415,628" />
-        <EdgeLayout
-          Id="Package\PLR Differences.Paths[Sort Output4]"
-          TopLeft="348.5,604">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="136,24"
-              Start="0,0"
-              End="136,16.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,8" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,8"
-                    Point2="0,12"
-                    Point3="4,12" />
-                  <mssgle:LineSegment
-                    End="132,12" />
-                  <mssgle:CubicBezierSegment
-                    Point1="132,12"
-                    Point2="136,12"
-                    Point3="136,16" />
-                  <mssgle:LineSegment
-                    End="136,16.5" />
+                    End="-57,-22.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -18855,52 +19394,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\PLR Differences.Paths[Sort Output5]"
-          TopLeft="453.5,538">
+          TopLeft="437,538">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="52.8333333333333,90"
+              EndConnector="69.3333333333333,90"
               Start="0,0"
-              End="52.8333333333333,82.5">
+              End="69.3333333333333,82.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,49.3854907539118" />
+                    End="0,41.1874389847055" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,49.3854907539118"
-                    Point2="0,53.3854907539118"
-                    Point3="4,53.3854907539118" />
+                    Point1="0,41.1874389847055"
+                    Point2="0,45.1874389847055"
+                    Point3="4,45.1874389847055" />
                   <mssgle:LineSegment
-                    End="48.8333333333333,53.3854907539118" />
+                    End="65.3333333333333,45.1874389847055" />
                   <mssgle:CubicBezierSegment
-                    Point1="48.8333333333333,53.3854907539118"
-                    Point2="52.8333333333333,53.3854907539118"
-                    Point3="52.8333333333333,57.3854907539118" />
+                    Point1="65.3333333333333,45.1874389847055"
+                    Point2="69.3333333333333,45.1874389847055"
+                    Point3="69.3333333333333,49.1874389847055" />
                   <mssgle:LineSegment
-                    End="52.8333333333333,82.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\PLR Differences.Paths[Merge Join Output2]"
-          TopLeft="415,646">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-175,0"
-              Start="0,0"
-              End="-167.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-167.5,0" />
+                    End="69.3333333333333,82.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
