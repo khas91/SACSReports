@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="96"
-  DTS:VersionGUID="{FBB4209F-C186-4A89-A7D6-37872AA3C1FE}">
+  DTS:VersionBuild="101"
+  DTS:VersionGUID="{BCAD81AB-1798-4AC8-999B-81BB5E3D268B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -488,6 +488,111 @@
               DTS:TextQualified="True"
               DTS:ObjectName=" TOT PROF HRS"
               DTS:DTSID="{16BA4DC9-A428-4325-8E4C-A7B875B71E2E}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[PAROutput]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{4EC5F439-1FB9-4EFE-A9CA-D00AA120BC12}"
+      DTS:ObjectName="PAROutput">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">"Z:\\Stuart\\ConsoleApplications\\SACSReports\\data\\" + @[User::month] + " " + @[User::year] + "\\SACS Program Approval Report " + @[User::month]  + " " + @[User::year]  + ".csv"</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="Z:\Stuart\ConsoleApplications\SACSReports\data\October 2016\SACS Program Approval Report October 2016.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PGM_CD"
+              DTS:DTSID="{007BA725-275B-40D1-8EEB-44E328DE7700}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="60"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Offcl TTL"
+              DTS:DTSID="{51D49B48-FF82-47BB-8B25-A05D8BADC23E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CIP_CD"
+              DTS:DTSID="{6461159D-BA56-434E-9E13-C86FE2E0A63A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="3"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AWD_TY"
+              DTS:DTSID="{DDAAC685-D91F-4890-9BB2-C49A9F576C3C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="5"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PGM_TTL_CRD_HRS"
+              DTS:DTSID="{1340281C-6EC6-41A3-A924-F00AE8693AA3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="6"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PGM_TTL_MIN_CNTCT_HRS_REQD"
+              DTS:DTSID="{B4AEB433-5672-4E27-8571-4402A2043D7E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FIN_AID_APPRVD"
+              DTS:DTSID="{BD8BD1E0-AB1D-4FED-BD27-7F1C109C5D2A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="6"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EFF_TRM_D"
+              DTS:DTSID="{A78544C0-21BF-4427-BD27-63EC6352DDE2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="6"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="END_TRM"
+              DTS:DTSID="{A7205BF1-460A-423B-8588-785B481058A3}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -32027,6 +32132,499 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Program Approval Report"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{BB24FDBE-AC10-49CE-A545-F910CA80CF4A}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Program Approval Report"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Program Approval Report\Flat File Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Flat File Destination"
+              localeId="1033"
+              name="Flat File Destination">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Program Approval Report\Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[PAROutput]"
+                  connectionManagerRefId="Package.ConnectionManagers[PAROutput]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Program Approval Report\Flat File Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Program Approval Report\Flat File Destination.Inputs[Flat File Destination Input].Columns[PGM_CD]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="PGM_CD"
+                      externalMetadataColumnId="Package\Program Approval Report\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PGM_CD]"
+                      lineageId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].Columns[PGM_CD]" />
+                    <inputColumn
+                      refId="Package\Program Approval Report\Flat File Destination.Inputs[Flat File Destination Input].Columns[Offcl TTL]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="Offcl TTL"
+                      externalMetadataColumnId="Package\Program Approval Report\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Offcl TTL]"
+                      lineageId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].Columns[Offcl TTL]" />
+                    <inputColumn
+                      refId="Package\Program Approval Report\Flat File Destination.Inputs[Flat File Destination Input].Columns[CIP_CD]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="CIP_CD"
+                      externalMetadataColumnId="Package\Program Approval Report\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CIP_CD]"
+                      lineageId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].Columns[CIP_CD]" />
+                    <inputColumn
+                      refId="Package\Program Approval Report\Flat File Destination.Inputs[Flat File Destination Input].Columns[AWD_TY]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="AWD_TY"
+                      externalMetadataColumnId="Package\Program Approval Report\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AWD_TY]"
+                      lineageId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].Columns[AWD_TY]" />
+                    <inputColumn
+                      refId="Package\Program Approval Report\Flat File Destination.Inputs[Flat File Destination Input].Columns[PGM_TTL_CRD_HRS]"
+                      cachedDataType="numeric"
+                      cachedName="PGM_TTL_CRD_HRS"
+                      cachedPrecision="5"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Program Approval Report\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PGM_TTL_CRD_HRS]"
+                      lineageId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].Columns[PGM_TTL_CRD_HRS]" />
+                    <inputColumn
+                      refId="Package\Program Approval Report\Flat File Destination.Inputs[Flat File Destination Input].Columns[PGM_TTL_MIN_CNTCT_HRS_REQD]"
+                      cachedDataType="numeric"
+                      cachedName="PGM_TTL_MIN_CNTCT_HRS_REQD"
+                      cachedPrecision="6"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Program Approval Report\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PGM_TTL_MIN_CNTCT_HRS_REQD]"
+                      lineageId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].Columns[PGM_TTL_MIN_CNTCT_HRS_REQD]" />
+                    <inputColumn
+                      refId="Package\Program Approval Report\Flat File Destination.Inputs[Flat File Destination Input].Columns[FIN_AID_APPRVD]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="FIN_AID_APPRVD"
+                      externalMetadataColumnId="Package\Program Approval Report\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[FIN_AID_APPRVD]"
+                      lineageId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].Columns[FIN_AID_APPRVD]" />
+                    <inputColumn
+                      refId="Package\Program Approval Report\Flat File Destination.Inputs[Flat File Destination Input].Columns[EFF_TRM_D]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="EFF_TRM_D"
+                      externalMetadataColumnId="Package\Program Approval Report\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EFF_TRM_D]"
+                      lineageId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].Columns[EFF_TRM_D]" />
+                    <inputColumn
+                      refId="Package\Program Approval Report\Flat File Destination.Inputs[Flat File Destination Input].Columns[END_TRM]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="END_TRM"
+                      externalMetadataColumnId="Package\Program Approval Report\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[END_TRM]"
+                      lineageId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].Columns[END_TRM]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Program Approval Report\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PGM_CD]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="PGM_CD" />
+                    <externalMetadataColumn
+                      refId="Package\Program Approval Report\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Offcl TTL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="Offcl TTL" />
+                    <externalMetadataColumn
+                      refId="Package\Program Approval Report\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CIP_CD]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="CIP_CD" />
+                    <externalMetadataColumn
+                      refId="Package\Program Approval Report\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AWD_TY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      name="AWD_TY" />
+                    <externalMetadataColumn
+                      refId="Package\Program Approval Report\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PGM_TTL_CRD_HRS]"
+                      dataType="numeric"
+                      name="PGM_TTL_CRD_HRS"
+                      precision="5"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Program Approval Report\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PGM_TTL_MIN_CNTCT_HRS_REQD]"
+                      dataType="numeric"
+                      name="PGM_TTL_MIN_CNTCT_HRS_REQD"
+                      precision="6"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Program Approval Report\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[FIN_AID_APPRVD]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="FIN_AID_APPRVD" />
+                    <externalMetadataColumn
+                      refId="Package\Program Approval Report\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EFF_TRM_D]"
+                      codePage="1252"
+                      dataType="str"
+                      length="6"
+                      name="EFF_TRM_D" />
+                    <externalMetadataColumn
+                      refId="Package\Program Approval Report\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[END_TRM]"
+                      codePage="1252"
+                      dataType="str"
+                      length="6"
+                      name="END_TRM" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Program Approval Report\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[vwProgram_Approval_Report]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Program Approval Report\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[vulcan.MIS]"
+                  connectionManagerRefId="Package.ConnectionManagers[vulcan.MIS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].Columns[PGM_CD]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PGM_CD]"
+                      length="5"
+                      lineageId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].Columns[PGM_CD]"
+                      name="PGM_CD"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].Columns[Offcl TTL]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Offcl TTL]"
+                      length="60"
+                      lineageId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].Columns[Offcl TTL]"
+                      name="Offcl TTL"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].Columns[CIP_CD]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CIP_CD]"
+                      length="10"
+                      lineageId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].Columns[CIP_CD]"
+                      name="CIP_CD"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].Columns[AWD_TY]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AWD_TY]"
+                      length="3"
+                      lineageId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].Columns[AWD_TY]"
+                      name="AWD_TY"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].Columns[PGM_TTL_CRD_HRS]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PGM_TTL_CRD_HRS]"
+                      lineageId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].Columns[PGM_TTL_CRD_HRS]"
+                      name="PGM_TTL_CRD_HRS"
+                      precision="5"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].Columns[PGM_TTL_MIN_CNTCT_HRS_REQD]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PGM_TTL_MIN_CNTCT_HRS_REQD]"
+                      lineageId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].Columns[PGM_TTL_MIN_CNTCT_HRS_REQD]"
+                      name="PGM_TTL_MIN_CNTCT_HRS_REQD"
+                      precision="6"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].Columns[FIN_AID_APPRVD]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FIN_AID_APPRVD]"
+                      length="1"
+                      lineageId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].Columns[FIN_AID_APPRVD]"
+                      name="FIN_AID_APPRVD"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].Columns[EFF_TRM_D]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EFF_TRM_D]"
+                      length="6"
+                      lineageId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].Columns[EFF_TRM_D]"
+                      name="EFF_TRM_D"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].Columns[END_TRM]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[END_TRM]"
+                      length="6"
+                      lineageId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].Columns[END_TRM]"
+                      name="END_TRM"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PGM_CD]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="PGM_CD" />
+                    <externalMetadataColumn
+                      refId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Offcl TTL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="Offcl TTL" />
+                    <externalMetadataColumn
+                      refId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CIP_CD]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="CIP_CD" />
+                    <externalMetadataColumn
+                      refId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AWD_TY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      name="AWD_TY" />
+                    <externalMetadataColumn
+                      refId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PGM_TTL_CRD_HRS]"
+                      dataType="numeric"
+                      name="PGM_TTL_CRD_HRS"
+                      precision="5"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PGM_TTL_MIN_CNTCT_HRS_REQD]"
+                      dataType="numeric"
+                      name="PGM_TTL_MIN_CNTCT_HRS_REQD"
+                      precision="6"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FIN_AID_APPRVD]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="FIN_AID_APPRVD" />
+                    <externalMetadataColumn
+                      refId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EFF_TRM_D]"
+                      codePage="1252"
+                      dataType="str"
+                      length="6"
+                      name="EFF_TRM_D" />
+                    <externalMetadataColumn
+                      refId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[END_TRM]"
+                      codePage="1252"
+                      dataType="str"
+                      length="6"
+                      name="END_TRM" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PGM_CD]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      lineageId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PGM_CD]"
+                      name="PGM_CD" />
+                    <outputColumn
+                      refId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Offcl TTL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      lineageId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Offcl TTL]"
+                      name="Offcl TTL" />
+                    <outputColumn
+                      refId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CIP_CD]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CIP_CD]"
+                      name="CIP_CD" />
+                    <outputColumn
+                      refId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AWD_TY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AWD_TY]"
+                      name="AWD_TY" />
+                    <outputColumn
+                      refId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PGM_TTL_CRD_HRS]"
+                      dataType="numeric"
+                      lineageId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PGM_TTL_CRD_HRS]"
+                      name="PGM_TTL_CRD_HRS"
+                      precision="5"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PGM_TTL_MIN_CNTCT_HRS_REQD]"
+                      dataType="numeric"
+                      lineageId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PGM_TTL_MIN_CNTCT_HRS_REQD]"
+                      name="PGM_TTL_MIN_CNTCT_HRS_REQD"
+                      precision="6"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FIN_AID_APPRVD]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FIN_AID_APPRVD]"
+                      name="FIN_AID_APPRVD" />
+                    <outputColumn
+                      refId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EFF_TRM_D]"
+                      codePage="1252"
+                      dataType="str"
+                      length="6"
+                      lineageId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EFF_TRM_D]"
+                      name="EFF_TRM_D" />
+                    <outputColumn
+                      refId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[END_TRM]"
+                      codePage="1252"
+                      dataType="str"
+                      length="6"
+                      lineageId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[END_TRM]"
+                      name="END_TRM" />
+                    <outputColumn
+                      refId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Program Approval Report.Paths[OLE DB Source Output]"
+              endId="Package\Program Approval Report\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Script Task"
       DTS:CreationName="Microsoft.ScriptTask"
       DTS:Description="Script Task"
@@ -32807,6 +33405,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 5"
       DTS:To="Package\PLHR Differences" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 6]"
+      DTS:CreationName=""
+      DTS:DTSID="{2DE5CB40-88E9-4BA5-98D7-93B0B908E61E}"
+      DTS:From="Package\Program Approval Report"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 6"
+      DTS:To="Package\Execute Process Task 2" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -33002,6 +33608,32 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,125.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="198,42"
+          Id="Package\Program Approval Report"
+          TopLeft="23,35" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 6]"
+          TopLeft="221,59">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="64,0"
+              Start="0,0"
+              End="56.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="56.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -34401,5 +35033,56 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <TaskHost
+    design-time-name="Package\Program Approval Report">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Program Approval Report\OLE DB Source"
+          TopLeft="368,103" />
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Program Approval Report\Flat File Destination"
+          TopLeft="360,216" />
+        <EdgeLayout
+          Id="Package\Program Approval Report.Paths[OLE DB Source Output]"
+          TopLeft="444.5,145">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,71"
+              Start="0,0"
+              End="0,63.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,63.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Program Approval Report\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">View</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
