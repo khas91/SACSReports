@@ -28,7 +28,7 @@ namespace PLR
                 HelpText = "Used to restrict results to classes taking place a specific campus Center (not required)")]
             public String campusCenter {get; set;}
             [Option ('a', "awardType", Required = false, DefaultValue = "",
-                HelpText = "Used to restrict results to classes for programs with the specified award type")]
+                HelpText = "Used to restrict results to classes for programs with the specified award type (not required)")]
             public String awardType { get; set;}
             [Option ('r', "highSchoolMode", Required = false, DefaultValue = false,
                 HelpText = "Used to toggle high school mode on or off (causes only high school campus centers to be returned, default = false)")]
