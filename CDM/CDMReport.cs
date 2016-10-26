@@ -99,6 +99,7 @@ namespace CDM
 	                                         +"       ,groupcourse.PGM_AREA_GROUP_CRS                                                                                                   "
 	                                         +"       ,CASE WHEN prog.AWD_TY = 'VC' THEN prog.PGM_TTL_MIN_CNTCT_HRS_REQD ELSE prog.PGM_TTL_CRD_HRS END AS HRS                           "
 	                                         +"       ,prog.PGM_TTL_GE_HRS_REQD                                                                                                         "
+                                             +"       ,prog.FIN_AID_APPRVD                                                                                                              "
                                              +"   FROM                                                                                                                                  "
 	                                         +"       MIS.dbo.ST_PROGRAMS_A_136  prog                                                                                                   "
 	                                         +"       INNER JOIN MIS.dbo.ST_PROGRAMS_A_136 progarea ON progarea.PGM_CD = prog.PGM_CD                                                    "
@@ -110,7 +111,6 @@ namespace CDM
 	                                         +"       prog.EFF_TRM_D <> ''                                                                                                              "
                                              +"       AND prog.EFF_TRM_D <= '" + options.maxTerm + "'                                                                                   "
                                              +"       AND (prog.END_TRM = '' OR prog.END_TRM >= '" + options.minTerm + "')                                                              "
-                                             +"       AND prog.FIN_AID_APPRVD = 'Y'                                                                                                     "
 	                                         +"       AND prog.AWD_TY NOT IN ('NC','ND','HS')                                                                                           "
 	                                         +"       AND SUBSTRING(prog.PGM_CD, 1, 2) <> '00'                                                                                          "
                                              +"   ORDER BY                                                                                                                              "
@@ -128,6 +128,7 @@ namespace CDM
                 String courseID = reader["PGM_AREA_GROUP_CRS"].ToString().Trim();
                 int areaNum = int.Parse(reader["PGM_AREA"].ToString());
                 int groupNum = int.Parse(reader["PGM_AREA_GROUP"].ToString());
+                bool financialAidApproved = reader["FIN_AID_APPRVD"].ToString() == "Y";
 
                 AcademicProgram prog;
 
@@ -137,6 +138,7 @@ namespace CDM
                     prog.progCode = curProgramCode;
                     prog.awardType = reader["AWD_TY"].ToString();
                     prog.progName = reader["Title"].ToString();
+                    prog.financialAidApproved = financialAidApproved;
                     prog.catalogChanges = new List<AcademicProgram.CatalogChange>();
                     prog.catalogDictionary = new Dictionary<string, AcademicProgram.CatalogChange>();
                     programs.Add(prog);
@@ -613,7 +615,7 @@ namespace CDM
                         percentCoreAndProfessionalHours = percentCoreAndProfessionalHours * 100;
 
                         file.WriteLine(String.Format(options.minTerm + "," + options.maxTerm + "," + prog.awardType + "," + prog.progCode + @",""" + prog.progName + @"""," + catalog.totalProgramHours + ","
-                            + totalProgramHours + ",{0:0.00}," + totalGenEdHours + ",{1:0.00}," + totalCoreAndProfessional + ",{2:0.00},Y", percentProgramHours, percentGenEdHours, percentCoreAndProfessionalHours));
+                            + totalProgramHours + ",{0:0.00}," + totalGenEdHours + ",{1:0.00}," + totalCoreAndProfessional + ",{2:0.00}," + prog.financialAidApproved, percentProgramHours, percentGenEdHours, percentCoreAndProfessionalHours));
                     }
                 }
 

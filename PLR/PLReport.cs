@@ -573,21 +573,26 @@ namespace PLR
                                 andGroups.Add(andGroupTotal);
                             }
 
+                            float areaHours = 0;
+
                             if (andGroups.Count == 0)
                             {
-                                totalProgramHours += groupHours.Max();
+                                areaHours = groupHours.Max();
                             }
                             else
                             {
-                                totalProgramHours += andGroups.Max();
+                                areaHours = andGroups.Max();
                             }
+
+                            totalProgramHours += areaHours;
+
                             if (genEdArea)
                             {
-                                totalGenEdHours += totalProgramHours;
+                                totalGenEdHours += areaHours;
                             }
                             else
                             {
-                                totalCoreAndProfessionalHours += totalProgramHours;
+                                totalCoreAndProfessionalHours += areaHours;
                             }
                         }
 
@@ -684,6 +689,7 @@ namespace PLR
         public String awardType;
         public List<CatalogChange> catalogChanges;
         public Dictionary<String, CatalogChange> catalogDictionary;
+        public bool financialAidApproved;
 
         public class CatalogChange
         {

@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="101"
-  DTS:VersionGUID="{BCAD81AB-1798-4AC8-999B-81BB5E3D268B}">
+  DTS:VersionBuild="114"
+  DTS:VersionGUID="{4F9864C9-586D-4B98-B453-D73D6FB5913F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -518,7 +518,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="PGM_CD"
-              DTS:DTSID="{007BA725-275B-40D1-8EEB-44E328DE7700}"
+              DTS:DTSID="{CC22FA5A-9C11-4C5A-B2CB-23E3882D5E46}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -527,7 +527,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Offcl TTL"
-              DTS:DTSID="{51D49B48-FF82-47BB-8B25-A05D8BADC23E}"
+              DTS:DTSID="{0E264FB3-D72D-48A8-9FD4-F55401B1D8AA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -536,7 +536,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CIP_CD"
-              DTS:DTSID="{6461159D-BA56-434E-9E13-C86FE2E0A63A}"
+              DTS:DTSID="{FAC22E91-DA3D-493B-9AE1-265D4004F69F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -545,7 +545,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="AWD_TY"
-              DTS:DTSID="{DDAAC685-D91F-4890-9BB2-C49A9F576C3C}"
+              DTS:DTSID="{47189DDD-2BBF-42A6-BFD5-924DD315F2D6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -555,7 +555,7 @@
               DTS:DataScale="2"
               DTS:TextQualified="True"
               DTS:ObjectName="PGM_TTL_CRD_HRS"
-              DTS:DTSID="{1340281C-6EC6-41A3-A924-F00AE8693AA3}"
+              DTS:DTSID="{1E826A9C-4C70-4344-9913-38F43347D542}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -565,7 +565,7 @@
               DTS:DataScale="2"
               DTS:TextQualified="True"
               DTS:ObjectName="PGM_TTL_MIN_CNTCT_HRS_REQD"
-              DTS:DTSID="{B4AEB433-5672-4E27-8571-4402A2043D7E}"
+              DTS:DTSID="{B02BF09A-E21A-40E9-B71A-9E6CBE68B0FD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -574,7 +574,16 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="FIN_AID_APPRVD"
-              DTS:DTSID="{BD8BD1E0-AB1D-4FED-BD27-7F1C109C5D2A}"
+              DTS:DTSID="{42465973-A525-4A49-A026-3342AEBB1E80}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SACS Approval"
+              DTS:DTSID="{3637B0A8-39DB-4BB0-8F8A-2588F34251CB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -583,7 +592,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="EFF_TRM_D"
-              DTS:DTSID="{A78544C0-21BF-4427-BD27-63EC6352DDE2}"
+              DTS:DTSID="{0B9A80F6-B3DA-4AD6-94C9-0A78C81276E7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -592,7 +601,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="END_TRM"
-              DTS:DTSID="{A7205BF1-460A-423B-8588-785B481058A3}"
+              DTS:DTSID="{63721B35-3257-4F63-BD0F-4C0570048F0B}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -898,7 +907,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="PGM CD"
-              DTS:DTSID="{47768888-B496-4B3D-BF0D-E4C9F7A9C794}"
+              DTS:DTSID="{6869D86F-22D2-484E-9DF4-848C85F626A4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -907,7 +916,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Award Type"
-              DTS:DTSID="{F5544C80-3183-4E4A-BE64-D7BAFA001330}"
+              DTS:DTSID="{F697F2A3-AA45-4679-BE4B-6BD163377D7D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -916,7 +925,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Program Title"
-              DTS:DTSID="{D141E7E3-4178-49CE-BB76-953F44F230E6}"
+              DTS:DTSID="{1E701DA7-999F-47C8-8664-4754E3308D79}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -925,7 +934,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CATALOG YEAR"
-              DTS:DTSID="{9304C267-E111-4FEF-9870-DDB6BB25FAD8}"
+              DTS:DTSID="{B64EA91E-DC78-4FFE-BEFA-3C7F951D5512}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -934,7 +943,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CAMP CNTR"
-              DTS:DTSID="{679C8E3D-AE46-4F93-92A0-15E7C0BCBD08}"
+              DTS:DTSID="{33970249-9118-4951-8AF1-849380AE3E20}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -943,7 +952,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Location Name"
-              DTS:DTSID="{4346AA5F-6980-4FFC-BF2F-C5F1A5C77157}"
+              DTS:DTSID="{D315E456-3735-4519-B7CB-1F6CFA2A5B13}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -952,7 +961,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CURRENT TOT PGM HRS"
-              DTS:DTSID="{51FFECE3-C32D-4C3F-B31D-824D1FFB5ED0}"
+              DTS:DTSID="{6E554CC0-F12E-419A-ACE1-10EA0CB22A44}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -961,7 +970,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CURRENT TOT GEN-ED HRS"
-              DTS:DTSID="{6F4BF850-8516-400B-8ED6-09B39555BCA1}"
+              DTS:DTSID="{C96C707B-9D7D-4232-80D0-98FBAFBF1AFB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -970,7 +979,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CURRENT TOT PROF HRS"
-              DTS:DTSID="{CB000ACB-F3A9-462E-BFCA-71862C831B2F}"
+              DTS:DTSID="{98AF7D63-8E84-474A-B1D0-28E0F01DFFA4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -979,7 +988,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Change"
-              DTS:DTSID="{98D41642-2D04-4DB0-9FD8-E38EB017C099}"
+              DTS:DTSID="{C90DA263-1C49-4E72-91A2-489A3D10D253}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -988,7 +997,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="PREVIOUS TOT PGM HRS"
-              DTS:DTSID="{B74843DC-DCD4-48B9-BA2A-2651753621B0}"
+              DTS:DTSID="{F8104D0F-6B2D-4CEA-8C3D-65D5B9D9D2AA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -997,7 +1006,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="PREV TOT GEN-ED HRS"
-              DTS:DTSID="{10801535-2184-45FF-ADE3-F3FE9746C4C4}"
+              DTS:DTSID="{838C27D8-D44B-46CA-B2AB-1600DAEB1D11}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1006,7 +1015,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="PREV TOT PROF HRS"
-              DTS:DTSID="{40C33748-C95F-4490-A958-1657FC66F4CF}"
+              DTS:DTSID="{D00EAF64-DE67-4BD7-BA3E-3F9CA6694961}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -1524,6 +1533,24 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
+      DTS:DTSID="{3E52B69D-F319-4BA2-9C8F-C872C48A561B}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="noEncodingResults">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
       DTS:DTSID="{1421B0C5-8125-416B-BC75-83D87A69E985}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
@@ -1567,6 +1594,7 @@
       DTS:refId="Package\CDM Differences"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{062c4cdc-38dd-4074-844e-3dc78de852cc}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -4323,34 +4351,14 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Execute Process Task"
+      DTS:refId="Package\Course Delivery Method"
       DTS:CreationName="Microsoft.ExecuteProcess"
       DTS:Description="Execute Process Task"
-      DTS:DTSID="{2F379E54-566E-44ED-B849-1E269E9B4021}"
-      DTS:ExecutableType="Microsoft.ExecuteProcess"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Execute Process Task"
-      DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:PropertyExpression
-        DTS:Name="Arguments">"-m " + @minTerm + " -x " + @maxTerm + " -o " + @month + " -y " + @year</DTS:PropertyExpression>
-      <DTS:ObjectData>
-        <ExecuteProcessData
-          Executable="Z:\Stuart\ConsoleApplications\SACSReports\PLR\bin\Debug\PLR.exe"
-          Arguments="-m 20122 -x 20172 -o October -y 2016"
-          WorkingDirectory="Z:\Stuart\ConsoleApplications\SACSReports\PLR\bin\Debug"
-          WindowStyle="Hidden" />
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Execute Process Task 1"
-      DTS:CreationName="Microsoft.ExecuteProcess"
-      DTS:Description="Execute Process Task"
+      DTS:Disabled="True"
       DTS:DTSID="{BEFE7549-F38E-4A6F-A89F-738820E89567}"
       DTS:ExecutableType="Microsoft.ExecuteProcess"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Execute Process Task 1"
+      DTS:ObjectName="Course Delivery Method"
       DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
@@ -4364,13 +4372,38 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Execute Process Task 2"
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
+      DTS:DTSID="{620FE74C-619D-4D8B-ADF7-8E037DE3E7DC}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{ED767E78-EA1C-4106-83EB-17AF885F3A36}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="SELECT&#xA;&#x9;*&#xA;FROM&#xA;&#x9;MIS.dbo.fn_Sites_With_No_Encoding(' @[User::minTerm]','@[User::maxTerm]')&#xA;ORDER BY&#xA;&#x9;centercode"
+          SQLTask:ResultType="ResultSetType_Rowset" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::noEncodingResults" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\High School Program Location Report"
       DTS:CreationName="Microsoft.ExecuteProcess"
       DTS:Description="Execute Process Task"
+      DTS:Disabled="True"
       DTS:DTSID="{5305803D-D1B4-4348-9A79-7FA513452D13}"
       DTS:ExecutableType="Microsoft.ExecuteProcess"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Execute Process Task 2"
+      DTS:ObjectName="High School Program Location Report"
       DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
@@ -5390,6 +5423,13 @@
                       cachedLength="60"
                       cachedName="PGM_TRK_TTL"
                       lineageId="Package\PLHR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[PGM_TRK_TTL]" />
+                    <inputColumn
+                      refId="Package\PLHR Differences\Derived Column 1.Inputs[Derived Column Input].Columns[PGM_SHRT_TTL]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="PGM_SHRT_TTL"
+                      lineageId="Package\PLHR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[PGM_SHRT_TTL]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -5417,13 +5457,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,100,1252)[REPLACENULL](#{Package\PLHR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[PGM_OFFCL_TTL]},#{Package\PLHR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[PGM_TRK_TTL]})</property>
+                          name="Expression">(DT_STR,100,1252)(#{Package\PLHR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[PGM_OFFCL_TTL]} == "" ? (#{Package\PLHR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[PGM_TRK_TTL]} == "" ? #{Package\PLHR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[PGM_SHRT_TTL]} : #{Package\PLHR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[PGM_TRK_TTL]}) : #{Package\PLHR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[PGM_OFFCL_TTL]})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,100,1252)REPLACENULL(PGM_OFFCL_TTL,PGM_TRK_TTL)</property>
+                          name="FriendlyExpression">(DT_STR,100,1252)(PGM_OFFCL_TTL == "" ? (PGM_TRK_TTL == "" ? PGM_SHRT_TTL : PGM_TRK_TTL) : PGM_OFFCL_TTL)</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -6358,6 +6398,13 @@
                       cachedLength="60"
                       cachedName="PGM_TRK_TTL"
                       lineageId="Package\PLHR Differences\Sort 2.Outputs[Sort Output].Columns[PGM_TRK_TTL]" />
+                    <inputColumn
+                      refId="Package\PLHR Differences\Merge Join 1.Inputs[Merge Join Right Input].Columns[PGM_SHRT_TTL]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="PGM_SHRT_TTL"
+                      lineageId="Package\PLHR Differences\Sort 2.Outputs[Sort Output].Columns[PGM_SHRT_TTL]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -6564,6 +6611,21 @@
                           name="InputColumnID">#{Package\PLHR Differences\Merge Join 1.Inputs[Merge Join Right Input].Columns[PGM_TRK_TTL]}</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\PLHR Differences\Merge Join 1.Outputs[Merge Join Output].Columns[PGM_SHRT_TTL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      lineageId="Package\PLHR Differences\Merge Join 1.Outputs[Merge Join Output].Columns[PGM_SHRT_TTL]"
+                      name="PGM_SHRT_TTL">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\PLHR Differences\Merge Join 1.Inputs[Merge Join Right Input].Columns[PGM_SHRT_TTL]}</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -6696,6 +6758,14 @@
                       cachedName="PGM_TRK_TTL"
                       cachedSortKeyPosition="5"
                       lineageId="Package\PLHR Differences\Sort 5.Outputs[Sort Output].Columns[PGM_TRK_TTL]" />
+                    <inputColumn
+                      refId="Package\PLHR Differences\Merge Join 2.Inputs[Merge Join Left Input].Columns[PGM_SHRT_TTL]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="PGM_SHRT_TTL"
+                      cachedSortKeyPosition="6"
+                      lineageId="Package\PLHR Differences\Sort 5.Outputs[Sort Output].Columns[PGM_SHRT_TTL]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -6952,6 +7022,21 @@
                           dataType="System.Int32"
                           description="The input column associated with this output column"
                           name="InputColumnID">#{Package\PLHR Differences\Merge Join 2.Inputs[Merge Join Left Input].Columns[PGM_TRK_TTL]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\PLHR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[PGM_SHRT_TTL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      lineageId="Package\PLHR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[PGM_SHRT_TTL]"
+                      name="PGM_SHRT_TTL">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\PLHR Differences\Merge Join 2.Inputs[Merge Join Left Input].Columns[PGM_SHRT_TTL]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -17952,6 +18037,24 @@
                           name="NewSortKeyPosition">5</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\PLHR Differences\Sort 5.Inputs[Sort Input].Columns[PGM_SHRT_TTL]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="PGM_SHRT_TTL"
+                      lineageId="Package\PLHR Differences\Merge Join 1.Outputs[Merge Join Output].Columns[PGM_SHRT_TTL]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">6</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -18161,6 +18264,22 @@
                           name="SortColumnId">#{Package\PLHR Differences\Merge Join 1.Outputs[Merge Join Output].Columns[PGM_TRK_TTL]}</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\PLHR Differences\Sort 5.Outputs[Sort Output].Columns[PGM_SHRT_TTL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      lineageId="Package\PLHR Differences\Sort 5.Outputs[Sort Output].Columns[PGM_SHRT_TTL]"
+                      name="PGM_SHRT_TTL"
+                      sortKeyPosition="6">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\PLHR Differences\Merge Join 1.Outputs[Merge Join Output].Columns[PGM_SHRT_TTL]}</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -18225,29 +18344,29 @@
               startId="Package\PLHR Differences\OLE DB Source 1.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\PLHR Differences.Paths[Sort Output4]"
-              endId="Package\PLHR Differences\Merge Join 1.Inputs[Merge Join Left Input]"
-              name="Sort Output"
-              startId="Package\PLHR Differences\Sort 3.Outputs[Sort Output]" />
-            <path
-              refId="Package\PLHR Differences.Paths[Sort Output]"
-              endId="Package\PLHR Differences\Merge Join.Inputs[Merge Join Left Input]"
-              name="Sort Output"
-              startId="Package\PLHR Differences\Sort.Outputs[Sort Output]" />
-            <path
-              refId="Package\PLHR Differences.Paths[Sort Output1]"
               endId="Package\PLHR Differences\Merge Join 2.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\PLHR Differences\Sort 5.Outputs[Sort Output]" />
             <path
-              refId="Package\PLHR Differences.Paths[Sort Output2]"
+              refId="Package\PLHR Differences.Paths[Sort Output]"
               endId="Package\PLHR Differences\Merge Join.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\PLHR Differences\Sort 1.Outputs[Sort Output]" />
             <path
-              refId="Package\PLHR Differences.Paths[Sort Output3]"
+              refId="Package\PLHR Differences.Paths[Sort Output1]"
               endId="Package\PLHR Differences\Merge Join 1.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\PLHR Differences\Sort 2.Outputs[Sort Output]" />
+            <path
+              refId="Package\PLHR Differences.Paths[Sort Output2]"
+              endId="Package\PLHR Differences\Merge Join 1.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\PLHR Differences\Sort 3.Outputs[Sort Output]" />
+            <path
+              refId="Package\PLHR Differences.Paths[Sort Output3]"
+              endId="Package\PLHR Differences\Merge Join.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\PLHR Differences\Sort.Outputs[Sort Output]" />
             <path
               refId="Package\PLHR Differences.Paths[Sort Output5]"
               endId="Package\PLHR Differences\Merge Join 2.Inputs[Merge Join Right Input]"
@@ -18261,6 +18380,7 @@
       DTS:refId="Package\PLR Differences"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{D45EBFD5-9B0B-47AD-9C4D-B16206644BC6}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -19264,6 +19384,13 @@
                       cachedLength="60"
                       cachedName="PGM_TRK_TTL"
                       lineageId="Package\PLR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[PGM_TRK_TTL]" />
+                    <inputColumn
+                      refId="Package\PLR Differences\Derived Column 1.Inputs[Derived Column Input].Columns[PGM_SHRT_TTL]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="PGM_SHRT_TTL"
+                      lineageId="Package\PLR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[PGM_SHRT_TTL]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -19291,13 +19418,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,100,1252)[REPLACENULL](#{Package\PLR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[PGM_OFFCL_TTL]},#{Package\PLR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[PGM_TRK_TTL]})</property>
+                          name="Expression">(DT_STR,100,1252)(#{Package\PLR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[PGM_OFFCL_TTL]} == "" ? (#{Package\PLR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[PGM_TRK_TTL]} == "" ? #{Package\PLR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[PGM_SHRT_TTL]} : #{Package\PLR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[PGM_TRK_TTL]}) : #{Package\PLR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[PGM_OFFCL_TTL]})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,100,1252)REPLACENULL(PGM_OFFCL_TTL,PGM_TRK_TTL)</property>
+                          name="FriendlyExpression">(DT_STR,100,1252)(PGM_OFFCL_TTL == "" ? (PGM_TRK_TTL == "" ? PGM_SHRT_TTL : PGM_TRK_TTL) : PGM_OFFCL_TTL)</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -20232,6 +20359,13 @@
                       cachedLength="60"
                       cachedName="PGM_TRK_TTL"
                       lineageId="Package\PLR Differences\Sort 2.Outputs[Sort Output].Columns[PGM_TRK_TTL]" />
+                    <inputColumn
+                      refId="Package\PLR Differences\Merge Join 1.Inputs[Merge Join Right Input].Columns[PGM_SHRT_TTL]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="PGM_SHRT_TTL"
+                      lineageId="Package\PLR Differences\Sort 2.Outputs[Sort Output].Columns[PGM_SHRT_TTL]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -20438,6 +20572,21 @@
                           name="InputColumnID">#{Package\PLR Differences\Merge Join 1.Inputs[Merge Join Right Input].Columns[PGM_TRK_TTL]}</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\PLR Differences\Merge Join 1.Outputs[Merge Join Output].Columns[PGM_SHRT_TTL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      lineageId="Package\PLR Differences\Merge Join 1.Outputs[Merge Join Output].Columns[PGM_SHRT_TTL]"
+                      name="PGM_SHRT_TTL">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\PLR Differences\Merge Join 1.Inputs[Merge Join Right Input].Columns[PGM_SHRT_TTL]}</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -20570,6 +20719,14 @@
                       cachedName="PGM_TRK_TTL"
                       cachedSortKeyPosition="5"
                       lineageId="Package\PLR Differences\Sort 5.Outputs[Sort Output].Columns[PGM_TRK_TTL]" />
+                    <inputColumn
+                      refId="Package\PLR Differences\Merge Join 2.Inputs[Merge Join Left Input].Columns[PGM_SHRT_TTL]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="PGM_SHRT_TTL"
+                      cachedSortKeyPosition="6"
+                      lineageId="Package\PLR Differences\Sort 5.Outputs[Sort Output].Columns[PGM_SHRT_TTL]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -20826,6 +20983,21 @@
                           dataType="System.Int32"
                           description="The input column associated with this output column"
                           name="InputColumnID">#{Package\PLR Differences\Merge Join 2.Inputs[Merge Join Left Input].Columns[PGM_TRK_TTL]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\PLR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[PGM_SHRT_TTL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      lineageId="Package\PLR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[PGM_SHRT_TTL]"
+                      name="PGM_SHRT_TTL">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\PLR Differences\Merge Join 2.Inputs[Merge Join Left Input].Columns[PGM_SHRT_TTL]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -31826,6 +31998,24 @@
                           name="NewSortKeyPosition">5</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\PLR Differences\Sort 5.Inputs[Sort Input].Columns[PGM_SHRT_TTL]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="PGM_SHRT_TTL"
+                      lineageId="Package\PLR Differences\Merge Join 1.Outputs[Merge Join Output].Columns[PGM_SHRT_TTL]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">6</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -32035,6 +32225,22 @@
                           name="SortColumnId">#{Package\PLR Differences\Merge Join 1.Outputs[Merge Join Output].Columns[PGM_TRK_TTL]}</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\PLR Differences\Sort 5.Outputs[Sort Output].Columns[PGM_SHRT_TTL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      lineageId="Package\PLR Differences\Sort 5.Outputs[Sort Output].Columns[PGM_SHRT_TTL]"
+                      name="PGM_SHRT_TTL"
+                      sortKeyPosition="6">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\PLR Differences\Merge Join 1.Outputs[Merge Join Output].Columns[PGM_SHRT_TTL]}</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -32099,29 +32305,29 @@
               startId="Package\PLR Differences\OLE DB Source 1.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\PLR Differences.Paths[Sort Output4]"
-              endId="Package\PLR Differences\Merge Join 1.Inputs[Merge Join Left Input]"
-              name="Sort Output"
-              startId="Package\PLR Differences\Sort 3.Outputs[Sort Output]" />
-            <path
-              refId="Package\PLR Differences.Paths[Sort Output]"
-              endId="Package\PLR Differences\Merge Join.Inputs[Merge Join Left Input]"
-              name="Sort Output"
-              startId="Package\PLR Differences\Sort.Outputs[Sort Output]" />
-            <path
-              refId="Package\PLR Differences.Paths[Sort Output1]"
               endId="Package\PLR Differences\Merge Join 2.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\PLR Differences\Sort 5.Outputs[Sort Output]" />
             <path
-              refId="Package\PLR Differences.Paths[Sort Output2]"
+              refId="Package\PLR Differences.Paths[Sort Output]"
               endId="Package\PLR Differences\Merge Join.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\PLR Differences\Sort 1.Outputs[Sort Output]" />
             <path
-              refId="Package\PLR Differences.Paths[Sort Output3]"
+              refId="Package\PLR Differences.Paths[Sort Output1]"
               endId="Package\PLR Differences\Merge Join 1.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\PLR Differences\Sort 2.Outputs[Sort Output]" />
+            <path
+              refId="Package\PLR Differences.Paths[Sort Output2]"
+              endId="Package\PLR Differences\Merge Join 1.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\PLR Differences\Sort 3.Outputs[Sort Output]" />
+            <path
+              refId="Package\PLR Differences.Paths[Sort Output3]"
+              endId="Package\PLR Differences\Merge Join.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\PLR Differences\Sort.Outputs[Sort Output]" />
             <path
               refId="Package\PLR Differences.Paths[Sort Output5]"
               endId="Package\PLR Differences\Merge Join 2.Inputs[Merge Join Right Input]"
@@ -32135,6 +32341,7 @@
       DTS:refId="Package\Program Approval Report"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{BB24FDBE-AC10-49CE-A545-F910CA80CF4A}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -32248,6 +32455,14 @@
                       cachedName="END_TRM"
                       externalMetadataColumnId="Package\Program Approval Report\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[END_TRM]"
                       lineageId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].Columns[END_TRM]" />
+                    <inputColumn
+                      refId="Package\Program Approval Report\Flat File Destination.Inputs[Flat File Destination Input].Columns[SACS_APPROVAL]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="SACS_APPROVAL"
+                      externalMetadataColumnId="Package\Program Approval Report\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SACS Approval]"
+                      lineageId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].Columns[SACS_APPROVAL]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -32305,6 +32520,12 @@
                       dataType="str"
                       length="6"
                       name="END_TRM" />
+                    <externalMetadataColumn
+                      refId="Package\Program Approval Report\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SACS Approval]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="SACS Approval" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -32469,6 +32690,17 @@
                       lineageId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].Columns[END_TRM]"
                       name="END_TRM"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].Columns[SACS_APPROVAL]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SACS_APPROVAL]"
+                      length="1"
+                      lineageId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].Columns[SACS_APPROVAL]"
+                      name="SACS_APPROVAL"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -32526,6 +32758,12 @@
                       dataType="str"
                       length="6"
                       name="END_TRM" />
+                    <externalMetadataColumn
+                      refId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SACS_APPROVAL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="SACS_APPROVAL" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -32583,6 +32821,13 @@
                       lineageId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FIN_AID_APPRVD]"
                       name="FIN_AID_APPRVD" />
                     <outputColumn
+                      refId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SACS_APPROVAL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SACS_APPROVAL]"
+                      name="SACS_APPROVAL" />
+                    <outputColumn
                       refId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EFF_TRM_D]"
                       codePage="1252"
                       dataType="str"
@@ -32622,6 +32867,28 @@
               startId="Package\Program Approval Report\OLE DB Source.Outputs[OLE DB Source Output]" />
           </paths>
         </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Program Location Report"
+      DTS:CreationName="Microsoft.ExecuteProcess"
+      DTS:Description="Execute Process Task"
+      DTS:Disabled="True"
+      DTS:DTSID="{2F379E54-566E-44ED-B849-1E269E9B4021}"
+      DTS:ExecutableType="Microsoft.ExecuteProcess"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Program Location Report"
+      DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:PropertyExpression
+        DTS:Name="Arguments">"-m " + @minTerm + " -x " + @maxTerm + " -o " + @month + " -y " + @year</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <ExecuteProcessData
+          Executable="Z:\Stuart\ConsoleApplications\SACSReports\PLR\bin\Debug\PLR.exe"
+          Arguments="-m 20122 -x 20172 -o October -y 2016"
+          WorkingDirectory="Z:\Stuart\ConsoleApplications\SACSReports\PLR\bin\Debug"
+          WindowStyle="Hidden" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -33361,10 +33628,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
       DTS:DTSID="{ED226673-676A-447E-BD39-BE87A0CAC9B7}"
-      DTS:From="Package\Execute Process Task"
+      DTS:From="Package\Program Location Report"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
-      DTS:To="Package\Execute Process Task 1" />
+      DTS:To="Package\Course Delivery Method" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
@@ -33377,10 +33644,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
       DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
       DTS:CreationName=""
       DTS:DTSID="{895BC93B-E49F-4EAE-8B9E-63EB8FD01697}"
-      DTS:From="Package\Execute Process Task 1"
+      DTS:From="Package\Course Delivery Method"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 2"
-      DTS:To="Package\Execute Process Task 2" />
+      DTS:To="Package\High School Program Location Report" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
       DTS:CreationName=""
@@ -33393,7 +33660,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
       DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
       DTS:CreationName=""
       DTS:DTSID="{6A504EC8-993E-4369-93FA-CBA797C913A3}"
-      DTS:From="Package\Execute Process Task 2"
+      DTS:From="Package\High School Program Location Report"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 4"
       DTS:To="Package\Script Task" />
@@ -33412,7 +33679,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
       DTS:From="Package\Program Approval Report"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 6"
-      DTS:To="Package\Execute Process Task 2" />
+      DTS:To="Package\High School Program Location Report" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -33431,16 +33698,16 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           Id="Package\CDM Differences"
           TopLeft="445,326" />
         <NodeLayout
-          Size="180,42"
-          Id="Package\Execute Process Task"
-          TopLeft="147,109" />
+          Size="191,42"
+          Id="Package\Course Delivery Method"
+          TopLeft="494,105" />
         <NodeLayout
-          Size="189,42"
-          Id="Package\Execute Process Task 1"
-          TopLeft="474,105" />
+          Size="163,42"
+          Id="Package\Execute SQL Task"
+          TopLeft="714,143" />
         <NodeLayout
-          Size="189,42"
-          Id="Package\Execute Process Task 2"
+          Size="255,42"
+          Id="Package\High School Program Location Report"
           TopLeft="285,41" />
         <NodeLayout
           Size="160,42"
@@ -33451,23 +33718,31 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           Id="Package\PLR Differences"
           TopLeft="168,323" />
         <NodeLayout
+          Size="198,42"
+          Id="Package\Program Approval Report"
+          TopLeft="23,35" />
+        <NodeLayout
+          Size="196,42"
+          Id="Package\Program Location Report"
+          TopLeft="147,109" />
+        <NodeLayout
           Size="131,42"
           Id="Package\Script Task"
           TopLeft="313,227" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="327,128">
+          TopLeft="343,130.833333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="147,0"
+              EndConnector="151,0"
               Start="0,0"
-              End="139.5,0">
+              End="143.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="139.5,0" />
+                    End="143.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -33512,24 +33787,24 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="474,120.333333333333">
+          TopLeft="494,120.333333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-64.3333333333334,-37.3333333333333"
+              EndConnector="-40.3333333333334,-37.3333333333333"
               Start="0,0"
-              End="-64.3333333333334,-29.8333333333333">
+              End="-40.3333333333334,-29.8333333333333">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-60.3333333333334,0" />
+                    End="-36.3333333333334,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="-60.3333333333334,0"
-                    Point2="-64.3333333333334,0"
-                    Point3="-64.3333333333334,-4" />
+                    Point1="-36.3333333333334,0"
+                    Point2="-40.3333333333334,0"
+                    Point3="-40.3333333333334,-4" />
                   <mssgle:LineSegment
-                    End="-64.3333333333334,-29.8333333333333" />
+                    End="-40.3333333333334,-29.8333333333333" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -33574,7 +33849,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="379,83">
+          TopLeft="374.916666666667,83">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -33616,10 +33891,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="198,42"
-          Id="Package\Program Approval Report"
-          TopLeft="23,35" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 6]"
           TopLeft="221,59">
@@ -33649,7 +33920,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     design-time-name="Package\CDM Differences">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="107,42"
           Id="Package\CDM Differences\Sort 1"
@@ -33697,7 +33968,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -33719,7 +33992,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -33753,7 +34028,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -33787,7 +34064,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -33809,7 +34088,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -33831,7 +34112,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -33950,108 +34233,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\PLHR Differences.Paths[Sort Output4]"
-          TopLeft="143.5,483">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="110,26"
-              Start="0,0"
-              End="110,18.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,9" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,9"
-                    Point2="0,13"
-                    Point3="4,13" />
-                  <mssgle:LineSegment
-                    End="106,13" />
-                  <mssgle:CubicBezierSegment
-                    Point1="106,13"
-                    Point2="110,13"
-                    Point3="110,17" />
-                  <mssgle:LineSegment
-                    End="110,18.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\PLHR Differences.Paths[Sort Output3]"
-          TopLeft="334.5,481">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-59.1666666666667,28"
-              Start="0,0"
-              End="-59.1666666666667,20.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,12.6088193456615" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,12.6088193456615"
-                    Point2="0,16.6088193456615"
-                    Point3="-4,16.6088193456615" />
-                  <mssgle:LineSegment
-                    End="-55.1666666666667,16.6088193456615" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-55.1666666666667,16.6088193456615"
-                    Point2="-59.1666666666667,16.6088193456615"
-                    Point3="-59.1666666666667,20.6088193456615" />
-                  <mssgle:LineSegment
-                    End="-59.1666666666667,20.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\PLHR Differences.Paths[Sort Output2]"
-          TopLeft="669,338">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-203,-32.6666666666667"
-              Start="0,0"
-              End="-195.5,-32.6666666666667">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-113.330275229358,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-113.330275229358,0"
-                    Point2="-117.330275229358,0"
-                    Point3="-117.330275229358,-4" />
-                  <mssgle:LineSegment
-                    End="-117.330275229358,-28.6666666666667" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-117.330275229358,-28.6666666666667"
-                    Point2="-117.330275229358,-32.6666666666667"
-                    Point3="-121.330275229358,-32.6666666666667" />
-                  <mssgle:LineSegment
-                    End="-195.5,-32.6666666666667" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\PLHR Differences.Paths[Sort Output1]"
           TopLeft="348.5,604">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -34085,7 +34266,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\PLHR Differences.Paths[Sort Output]"
+          Id="Package\PLHR Differences.Paths[Sort Output3]"
           TopLeft="440,252">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -34104,6 +34285,108 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                     Point3="-39,4" />
                   <mssgle:LineSegment
                     End="-39,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\PLHR Differences.Paths[Sort Output2]"
+          TopLeft="143.5,483">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="110,26"
+              Start="0,0"
+              End="110,18.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,9" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9"
+                    Point2="0,13"
+                    Point3="4,13" />
+                  <mssgle:LineSegment
+                    End="106,13" />
+                  <mssgle:CubicBezierSegment
+                    Point1="106,13"
+                    Point2="110,13"
+                    Point3="110,17" />
+                  <mssgle:LineSegment
+                    End="110,18.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\PLHR Differences.Paths[Sort Output1]"
+          TopLeft="334.5,481">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-59.1666666666667,28"
+              Start="0,0"
+              End="-59.1666666666667,20.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.6088193456615" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.6088193456615"
+                    Point2="0,16.6088193456615"
+                    Point3="-4,16.6088193456615" />
+                  <mssgle:LineSegment
+                    End="-55.1666666666667,16.6088193456615" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-55.1666666666667,16.6088193456615"
+                    Point2="-59.1666666666667,16.6088193456615"
+                    Point3="-59.1666666666667,20.6088193456615" />
+                  <mssgle:LineSegment
+                    End="-59.1666666666667,20.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\PLHR Differences.Paths[Sort Output]"
+          TopLeft="669,338">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-203,-32.6666666666667"
+              Start="0,0"
+              End="-195.5,-32.6666666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-113.330275229358,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-113.330275229358,0"
+                    Point2="-117.330275229358,0"
+                    Point3="-117.330275229358,-4" />
+                  <mssgle:LineSegment
+                    End="-117.330275229358,-28.6666666666667" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-117.330275229358,-28.6666666666667"
+                    Point2="-117.330275229358,-32.6666666666667"
+                    Point3="-121.330275229358,-32.6666666666667" />
+                  <mssgle:LineSegment
+                    End="-195.5,-32.6666666666667" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -34548,108 +34831,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\PLR Differences.Paths[Sort Output4]"
-          TopLeft="143.5,483">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="110,26"
-              Start="0,0"
-              End="110,18.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,9" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,9"
-                    Point2="0,13"
-                    Point3="4,13" />
-                  <mssgle:LineSegment
-                    End="106,13" />
-                  <mssgle:CubicBezierSegment
-                    Point1="106,13"
-                    Point2="110,13"
-                    Point3="110,17" />
-                  <mssgle:LineSegment
-                    End="110,18.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\PLR Differences.Paths[Sort Output3]"
-          TopLeft="334.5,481">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-59.1666666666667,28"
-              Start="0,0"
-              End="-59.1666666666667,20.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,12.6088193456615" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,12.6088193456615"
-                    Point2="0,16.6088193456615"
-                    Point3="-4,16.6088193456615" />
-                  <mssgle:LineSegment
-                    End="-55.1666666666667,16.6088193456615" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-55.1666666666667,16.6088193456615"
-                    Point2="-59.1666666666667,16.6088193456615"
-                    Point3="-59.1666666666667,20.6088193456615" />
-                  <mssgle:LineSegment
-                    End="-59.1666666666667,20.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\PLR Differences.Paths[Sort Output2]"
-          TopLeft="669,338">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-203,-32.6666666666667"
-              Start="0,0"
-              End="-195.5,-32.6666666666667">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-113.330275229358,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-113.330275229358,0"
-                    Point2="-117.330275229358,0"
-                    Point3="-117.330275229358,-4" />
-                  <mssgle:LineSegment
-                    End="-117.330275229358,-28.6666666666667" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-117.330275229358,-28.6666666666667"
-                    Point2="-117.330275229358,-32.6666666666667"
-                    Point3="-121.330275229358,-32.6666666666667" />
-                  <mssgle:LineSegment
-                    End="-195.5,-32.6666666666667" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\PLR Differences.Paths[Sort Output1]"
           TopLeft="348.5,604">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -34683,7 +34864,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\PLR Differences.Paths[Sort Output]"
+          Id="Package\PLR Differences.Paths[Sort Output3]"
           TopLeft="440,252">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -34702,6 +34883,108 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                     Point3="-39,4" />
                   <mssgle:LineSegment
                     End="-39,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\PLR Differences.Paths[Sort Output2]"
+          TopLeft="143.5,483">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="110,26"
+              Start="0,0"
+              End="110,18.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,9" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9"
+                    Point2="0,13"
+                    Point3="4,13" />
+                  <mssgle:LineSegment
+                    End="106,13" />
+                  <mssgle:CubicBezierSegment
+                    Point1="106,13"
+                    Point2="110,13"
+                    Point3="110,17" />
+                  <mssgle:LineSegment
+                    End="110,18.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\PLR Differences.Paths[Sort Output1]"
+          TopLeft="334.5,481">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-59.1666666666667,28"
+              Start="0,0"
+              End="-59.1666666666667,20.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.6088193456615" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.6088193456615"
+                    Point2="0,16.6088193456615"
+                    Point3="-4,16.6088193456615" />
+                  <mssgle:LineSegment
+                    End="-55.1666666666667,16.6088193456615" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-55.1666666666667,16.6088193456615"
+                    Point2="-59.1666666666667,16.6088193456615"
+                    Point3="-59.1666666666667,20.6088193456615" />
+                  <mssgle:LineSegment
+                    End="-59.1666666666667,20.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\PLR Differences.Paths[Sort Output]"
+          TopLeft="669,338">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-203,-32.6666666666667"
+              Start="0,0"
+              End="-195.5,-32.6666666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-113.330275229358,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-113.330275229358,0"
+                    Point2="-117.330275229358,0"
+                    Point3="-117.330275229358,-4" />
+                  <mssgle:LineSegment
+                    End="-117.330275229358,-28.6666666666667" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-117.330275229358,-28.6666666666667"
+                    Point2="-117.330275229358,-32.6666666666667"
+                    Point3="-121.330275229358,-32.6666666666667" />
+                  <mssgle:LineSegment
+                    End="-195.5,-32.6666666666667" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -35033,6 +35316,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\PLR Differences\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Program Approval Report">
     <LayoutInfo>
