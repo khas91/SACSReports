@@ -557,23 +557,27 @@ namespace CDM
 
                             andGroups.Add(andGroupTotal);
                         }
+			    
+			float areaHours = 0;
 
                         if (andGroups.Count == 0)
                         {
-                            totalProgramHours += groupHours.Max();
+                            areaHours += groupHours.Max();
                         }
                         else
                         {
-                            totalProgramHours += andGroups.Max();
+                            areaHours += andGroups.Max();
                         }
+			    
+			totalProgramHours += areaHours;
 
                         if (genEdArea)
                         {
-                            totalGenEdHours += andGroups.Max();
+                            totalGenEdHours += areaHours;
                         }
                         else
                         {
-                            totalCoreAndProfessionalHours += andGroups.Max();
+                            totalCoreAndProfessionalHours += areaHours;
                         }
                     }
 
