@@ -110,7 +110,7 @@ namespace CDM
                                              +"   WHERE                                                                                                                                 "
 	                                         +"       prog.EFF_TRM_D <> ''                                                                                                              "
                                              +"       AND prog.EFF_TRM_D <= '" + options.maxTerm + "'                                                                                   "
-                                             +"       AND (prog.END_TRM = '' OR prog.END_TRM >= '" + options.minTerm + "')                                                              "
+                                             +"       AND prog.END_TRM = ''                                                                                                             "
 	                                         +"       AND prog.AWD_TY NOT IN ('NC','ND','HS')                                                                                           "
 	                                         +"       AND SUBSTRING(prog.PGM_CD, 1, 2) <> '00'                                                                                          "
                                              +"   ORDER BY                                                                                                                              "
