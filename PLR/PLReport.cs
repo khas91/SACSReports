@@ -79,6 +79,7 @@ namespace PLR
             Dictionary<Tuple<String, String, String>, float> TotalCoreAndProfessionalForProgramByCampusCenter = new Dictionary<Tuple<string, string, string>, float>();
             Dictionary<Tuple<String, String, String>, List<String>> SatisfiedCoursesForProgramByCatalogYearAndCampusCenter = new Dictionary<Tuple<string, string, string>, List<string>>();
             Dictionary<Tuple<String, String, String>, List<String>> AACoursesByAACatalogAndCampus = new Dictionary<Tuple<string, string, string>, List<string>>();
+            Dictionary<String, String> locationNameDict = new Dictionary<string, string>();
 
             String[] highschoolCodes = new String[]{"D1427","C1411","A1618","D1401","C1634","C1414","A1103","B1403","A1104","A1105","D1103","B1408","A1110","A1111","A1112",
                                                     "Z7000","A1303","A1116","A1301","A1117","Z7004","A1118","B1613","A1119","A1114","Z7015","Z7002","B1410","F1410","A1106",
@@ -239,16 +240,19 @@ namespace PLR
 
             reader.Close();
 
-            comm = new SqlCommand("SELECT DISTINCT"
-	                           + "     class.campCntr              "
-                               + " FROM                            "
-	                           + "     MIS.dbo.ST_CLASS_A_151 class", conn);
+            comm = new SqlCommand("SELECT DISTINCT                                                                                             "
+	                              +"     class.campCntr                                                                                        "
+	                              +"     ,loc.LOCATION_NAME                                                                                    "
+                                  +" FROM                                                                                                      "
+	                              +"     MIS.dbo.ST_CLASS_A_151 class                                                                          "
+	                              +"     INNER JOIN MIS.dbo.FAC199_LOCATION_A_199 loc ON loc.SITE_LOCAL_NUM + loc.LOCATION_NUM = class.campCntr", conn);
 
             reader = comm.ExecuteReader();
 
             while (reader.Read())
             {
                 String campCntr = reader["campCntr"].ToString();
+                String locName = reader["LOCATION_NAME"].ToString();
 
                 if (options.runForHighSchool)
                 {
@@ -269,8 +273,9 @@ namespace PLR
                 {
                     continue;
                 }
-                campusCenters.Add(campCntr);
 
+                campusCenters.Add(campCntr);
+                locationNameDict.Add(campCntr, locName);
             }
 
             reader.Close();
@@ -621,7 +626,7 @@ namespace PLR
             {
                 if (options.summary)
 	            {
-		            file.WriteLine("PGM CD,AWD TYPE,CATALOG YEAR,CAMP CNTR,TRM FROM,TRM TO,TOT REQD PGM HRS,TOT PGM HRS,% PGM HRS,TOT GEN-ED HRS,TOT PROF HRS");
+		            file.WriteLine("PGM CD,AWD TYPE,CATALOG YEAR,CAMP CNTR,LOCATION NAME,TRM FROM,TRM TO,TOT REQD PGM HRS,TOT PGM HRS,% PGM HRS,TOT GEN-ED HRS,TOT PROF HRS");
 
                     foreach (AcademicProgram curProgram in programs)
 	                {
@@ -637,9 +642,12 @@ namespace PLR
 
                                 float percentageCompletable = (totalProgramHours / catalog.totalProgramHours) * 100;
 
-                                file.WriteLine(String.Format(curProgram.progCode + "," + curProgram.awardType + "," + catalog.effectiveTerm + "," + camp + "," + options.minTerm
-                                    + "," + options.maxTerm + "," + catalog.totalProgramHours + "," + totalProgramHours + "," + @",{0:0.00}," + genEdHours + coreAndProfHours, percentageCompletable));
-	                        }
+                                if (totalProgramHours != 0)
+                                {
+                                    file.WriteLine(String.Format(curProgram.progCode + "," + curProgram.awardType + "," + catalog.effectiveTerm + "," + camp + @",""" + locationNameDict[camp] + @"""," + options.minTerm
+                                    + "," + options.maxTerm + "," + catalog.totalProgramHours + "," + totalProgramHours + @",{0:0.00}," + genEdHours + "," + coreAndProfHours, percentageCompletable));
+                                }
+                            }
 	                    }
 	                }
 	            }
