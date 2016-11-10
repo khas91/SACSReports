@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="120"
-  DTS:VersionGUID="{2C9F7ECA-2267-4268-B88D-03C74BE1A34C}">
+  DTS:VersionBuild="130"
+  DTS:VersionGUID="{21F9EC5F-981F-444C-8912-E0641BF6E9E6}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -5729,7 +5729,7 @@
                       errorRowDisposition="FailComponent"
                       lineageId="Package\PLHR Differences\Derived Column 3.Outputs[Derived Column Output].Columns[percentage completable]"
                       name="percentage completable"
-                      precision="5"
+                      precision="16"
                       scale="2"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -5737,13 +5737,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_NUMERIC,5,2)((DT_NUMERIC,5,2)#{Package\PLHR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[CURRENT TOT PGM HRS]} / #{Package\PLHR Differences\Derived Column 1.Outputs[Derived Column Output].Columns[Total Program Hours Required]})</property>
+                          name="Expression">100 * (DT_NUMERIC,5,2)((DT_NUMERIC,5,2)#{Package\PLHR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[CURRENT TOT PGM HRS]} / #{Package\PLHR Differences\Derived Column 1.Outputs[Derived Column Output].Columns[Total Program Hours Required]})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_NUMERIC,5,2)((DT_NUMERIC,5,2)[CURRENT TOT PGM HRS] / [Total Program Hours Required])</property>
+                          name="FriendlyExpression">100 * (DT_NUMERIC,5,2)((DT_NUMERIC,5,2)[CURRENT TOT PGM HRS] / [Total Program Hours Required])</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -5753,7 +5753,7 @@
                       errorRowDisposition="FailComponent"
                       lineageId="Package\PLHR Differences\Derived Column 3.Outputs[Derived Column Output].Columns[previous percentage completable]"
                       name="previous percentage completable"
-                      precision="5"
+                      precision="16"
                       scale="2"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -5761,13 +5761,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_NUMERIC,5,2)((DT_NUMERIC,5,2)#{Package\PLHR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[PREVIOUS TOT PGM HRS]} / #{Package\PLHR Differences\Derived Column 1.Outputs[Derived Column Output].Columns[Total Program Hours Required]})</property>
+                          name="Expression">100 * (DT_NUMERIC,5,2)((DT_NUMERIC,5,2)#{Package\PLHR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[PREVIOUS TOT PGM HRS]} / #{Package\PLHR Differences\Derived Column 1.Outputs[Derived Column Output].Columns[Total Program Hours Required]})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_NUMERIC,5,2)((DT_NUMERIC,5,2)[PREVIOUS TOT PGM HRS] / [Total Program Hours Required])</property>
+                          name="FriendlyExpression">100 * (DT_NUMERIC,5,2)((DT_NUMERIC,5,2)[PREVIOUS TOT PGM HRS] / [Total Program Hours Required])</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -5945,7 +5945,7 @@
                       refId="Package\PLHR Differences\Flat File Destination.Inputs[Flat File Destination Input].Columns[percentage completable]"
                       cachedDataType="numeric"
                       cachedName="percentage completable"
-                      cachedPrecision="5"
+                      cachedPrecision="16"
                       cachedScale="2"
                       externalMetadataColumnId="Package\PLHR Differences\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Percentage of Total Program Hours]"
                       lineageId="Package\PLHR Differences\Derived Column 3.Outputs[Derived Column Output].Columns[percentage completable]" />
@@ -5953,7 +5953,7 @@
                       refId="Package\PLHR Differences\Flat File Destination.Inputs[Flat File Destination Input].Columns[previous percentage completable]"
                       cachedDataType="numeric"
                       cachedName="previous percentage completable"
-                      cachedPrecision="5"
+                      cachedPrecision="16"
                       cachedScale="2"
                       externalMetadataColumnId="Package\PLHR Differences\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Previous Percentage of Program Hours]"
                       lineageId="Package\PLHR Differences\Derived Column 3.Outputs[Derived Column Output].Columns[previous percentage completable]" />
@@ -18803,6 +18803,7 @@
       DTS:refId="Package\PLR Differences"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{D45EBFD5-9B0B-47AD-9C4D-B16206644BC6}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -20055,48 +20056,48 @@
                       refId="Package\PLR Differences\Derived Column 3.Outputs[Derived Column Output].Columns[percentage completable]"
                       dataType="numeric"
                       errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="IgnoreFailure"
                       lineageId="Package\PLR Differences\Derived Column 3.Outputs[Derived Column Output].Columns[percentage completable]"
                       name="percentage completable"
-                      precision="16"
-                      scale="2"
+                      precision="26"
+                      scale="9"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_NUMERIC,5,2)((DT_NUMERIC,5,2)#{Package\PLR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[CURRENT TOT PGM HRS]} / #{Package\PLR Differences\Derived Column 1.Outputs[Derived Column Output].Columns[Total Required Program Hours]}) * 100</property>
+                          name="Expression">((DT_NUMERIC,6,2)#{Package\PLR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[CURRENT TOT PGM HRS]} / #{Package\PLR Differences\Derived Column 1.Outputs[Derived Column Output].Columns[Total Required Program Hours]}) * 100</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_NUMERIC,5,2)((DT_NUMERIC,5,2)[CURRENT TOT PGM HRS] / [Total Required Program Hours]) * 100</property>
+                          name="FriendlyExpression">((DT_NUMERIC,6,2)[CURRENT TOT PGM HRS] / [Total Required Program Hours]) * 100</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\PLR Differences\Derived Column 3.Outputs[Derived Column Output].Columns[previous percentage completable]"
                       dataType="numeric"
                       errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="IgnoreFailure"
                       lineageId="Package\PLR Differences\Derived Column 3.Outputs[Derived Column Output].Columns[previous percentage completable]"
                       name="previous percentage completable"
-                      precision="16"
-                      scale="2"
+                      precision="26"
+                      scale="9"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_NUMERIC,5,2)((DT_NUMERIC,5,2)#{Package\PLR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[PREVIOUS TOT PGM HRS]} / #{Package\PLR Differences\Derived Column 1.Outputs[Derived Column Output].Columns[Total Required Program Hours]}) * 100</property>
+                          name="Expression">((DT_NUMERIC,6,2)#{Package\PLR Differences\Merge Join 2.Outputs[Merge Join Output].Columns[PREVIOUS TOT PGM HRS]} / #{Package\PLR Differences\Derived Column 1.Outputs[Derived Column Output].Columns[Total Required Program Hours]}) * 100</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_NUMERIC,5,2)((DT_NUMERIC,5,2)[PREVIOUS TOT PGM HRS] / [Total Required Program Hours]) * 100</property>
+                          name="FriendlyExpression">((DT_NUMERIC,6,2)[PREVIOUS TOT PGM HRS] / [Total Required Program Hours]) * 100</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -20274,16 +20275,16 @@
                       refId="Package\PLR Differences\Flat File Destination.Inputs[Flat File Destination Input].Columns[percentage completable]"
                       cachedDataType="numeric"
                       cachedName="percentage completable"
-                      cachedPrecision="16"
-                      cachedScale="2"
+                      cachedPrecision="26"
+                      cachedScale="9"
                       externalMetadataColumnId="Package\PLR Differences\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Percentage of Program Hours]"
                       lineageId="Package\PLR Differences\Derived Column 3.Outputs[Derived Column Output].Columns[percentage completable]" />
                     <inputColumn
                       refId="Package\PLR Differences\Flat File Destination.Inputs[Flat File Destination Input].Columns[previous percentage completable]"
                       cachedDataType="numeric"
                       cachedName="previous percentage completable"
-                      cachedPrecision="16"
-                      cachedScale="2"
+                      cachedPrecision="26"
+                      cachedScale="9"
                       externalMetadataColumnId="Package\PLR Differences\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Previous Percentage of Program Hours]"
                       lineageId="Package\PLR Differences\Derived Column 3.Outputs[Derived Column Output].Columns[previous percentage completable]" />
                   </inputColumns>
@@ -33701,35 +33702,14 @@
           ReadOnlyVariables="User::month,User::year"
           ReadWriteVariables="User::currCDMRData,User::currPLHRData,User::currPLRData,User::prevCDMRData,User::prevPLHRData,User::prevPLRData">
           <ProjectItem
-            Name="Properties\AssemblyInfo.cs"
-            Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_81d70baa5cd04720b3fe6260c0d2174d")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_81d70baa5cd04720b3fe6260c0d2174d")]
-[assembly: AssemblyCopyright("Copyright @  2016")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -34189,14 +34169,35 @@ namespace ST_81d70baa5cd04720b3fe6260c0d2174d.Properties {
   </ProjectExtensions>
 </Project>]]></ProjectItem>
           <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_81d70baa5cd04720b3fe6260c0d2174d")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_81d70baa5cd04720b3fe6260c0d2174d")]
+[assembly: AssemblyCopyright("Copyright @  2016")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -34917,183 +34918,81 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="107.2,41.6"
-          Id="Package\PLHR Differences\Sort 1"
-          TopLeft="669,317" />
-        <NodeLayout
-          Size="159.2,41.6"
-          Id="Package\PLHR Differences\OLE DB Source 1"
-          TopLeft="436,419" />
-        <NodeLayout
-          Size="163.2,41.6"
-          Id="Package\PLHR Differences\Derived Column 1"
-          TopLeft="225,655" />
-        <NodeLayout
-          Size="107.2,41.6"
-          Id="Package\PLHR Differences\Sort 2"
-          TopLeft="281,439" />
-        <NodeLayout
-          Size="107.2,41.6"
-          Id="Package\PLHR Differences\Sort 5"
-          TopLeft="295,562" />
-        <NodeLayout
-          Size="153.6,41.6"
-          Id="Package\PLHR Differences\Derived Column"
-          TopLeft="72,294" />
-        <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\PLHR Differences\OLE DB Source"
-          TopLeft="272,356" />
-        <NodeLayout
-          Size="171.2,41.6"
-          Id="Package\PLHR Differences\Flat File Destination"
-          TopLeft="20,573" />
-        <NodeLayout
-          Size="139.2,41.6"
-          Id="Package\PLHR Differences\Merge Join 2"
-          TopLeft="415,628" />
-        <NodeLayout
-          Size="129.6,41.6"
-          Id="Package\PLHR Differences\Merge Join"
-          TopLeft="336,290" />
-        <NodeLayout
-          Size="144,41.6"
-          Id="Package\PLHR Differences\Previous Data"
-          TopLeft="789,254" />
-        <NodeLayout
-          Size="163.2,41.6"
-          Id="Package\PLHR Differences\Derived Column 2"
-          TopLeft="527,547" />
-        <NodeLayout
-          Size="107.2,41.6"
+          Size="107,42"
           Id="Package\PLHR Differences\Sort 4"
           TopLeft="400,496" />
         <NodeLayout
-          Size="107.2,41.6"
-          Id="Package\PLHR Differences\Sort 3"
-          TopLeft="90,441" />
-        <NodeLayout
-          Size="139.2,41.6"
-          Id="Package\PLHR Differences\Merge Join 1"
-          TopLeft="184,509" />
-        <NodeLayout
-          Size="139.2,41.6"
+          Size="139,42"
           Id="Package\PLHR Differences\Current Data"
           TopLeft="578,255" />
         <NodeLayout
-          Size="97.6,41.6"
+          Size="163,42"
+          Id="Package\PLHR Differences\Derived Column 1"
+          TopLeft="225,655" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\PLHR Differences\Sort 5"
+          TopLeft="295,562" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\PLHR Differences\Merge Join 1"
+          TopLeft="184,509" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\PLHR Differences\Derived Column 3"
+          TopLeft="35,653" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\PLHR Differences\Sort 2"
+          TopLeft="281,439" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\PLHR Differences\Derived Column"
+          TopLeft="72,294" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\PLHR Differences\Derived Column 2"
+          TopLeft="527,547" />
+        <NodeLayout
+          Size="144,42"
+          Id="Package\PLHR Differences\Previous Data"
+          TopLeft="789,254" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\PLHR Differences\Merge Join 2"
+          TopLeft="415,628" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\PLHR Differences\OLE DB Source 1"
+          TopLeft="436,419" />
+        <NodeLayout
+          Size="98,42"
           Id="Package\PLHR Differences\Sort"
           TopLeft="440,231" />
         <NodeLayout
-          Size="127.2,41.6"
+          Size="171,42"
+          Id="Package\PLHR Differences\Flat File Destination"
+          TopLeft="20,573" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\PLHR Differences\Merge Join"
+          TopLeft="336,290" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\PLHR Differences\OLE DB Source"
+          TopLeft="272,356" />
+        <NodeLayout
+          Size="127,42"
           Id="Package\PLHR Differences\Aggregate"
           TopLeft="80,375" />
-        <EdgeLayout
-          Id="Package\PLHR Differences.Paths[Flat File Source Output]"
-          TopLeft="578,276">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-40,-24"
-              Start="0,0"
-              End="-32.5,-24">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-16,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-16,0"
-                    Point2="-20,0"
-                    Point3="-20,-4" />
-                  <mssgle:LineSegment
-                    End="-20,-20" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-20,-20"
-                    Point2="-20,-24"
-                    Point3="-24,-24" />
-                  <mssgle:LineSegment
-                    End="-32.5,-24" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\PLHR Differences.Paths[Derived Column Output3]"
-          TopLeft="527,568">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-57,-30"
-              Start="0,0"
-              End="-57,-22.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-53,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-53,0"
-                    Point2="-57,0"
-                    Point3="-57,-4" />
-                  <mssgle:LineSegment
-                    End="-57,-22.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\PLHR Differences.Paths[Derived Column Output2]"
-          TopLeft="146.25,336">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,39"
-              Start="0,0"
-              End="0,31.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\PLHR Differences.Paths[Aggregate Output 1]"
-          TopLeft="143.5,417">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,24"
-              Start="0,0"
-              End="0,16.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="107,42"
+          Id="Package\PLHR Differences\Sort 3"
+          TopLeft="90,441" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\PLHR Differences\Sort 1"
+          TopLeft="669,317" />
         <EdgeLayout
           Id="Package\PLHR Differences.Paths[Sort Output5]"
           TopLeft="437,538">
@@ -35293,40 +35192,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\PLHR Differences.Paths[OLE DB Source Output]"
-          TopLeft="515.5,461">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="93,86"
-              Start="0,0"
-              End="93,78.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,39" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,39"
-                    Point2="0,43"
-                    Point3="4,43" />
-                  <mssgle:LineSegment
-                    End="89,43" />
-                  <mssgle:CubicBezierSegment
-                    Point1="89,43"
-                    Point2="93,43"
-                    Point3="93,47" />
-                  <mssgle:LineSegment
-                    End="93,78.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\PLHR Differences.Paths[OLE DB Source Output1]"
           TopLeft="347,398">
           <EdgeLayout.Curve>
@@ -35352,6 +35217,40 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                     Point3="-12.5,24.5" />
                   <mssgle:LineSegment
                     End="-12.5,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\PLHR Differences.Paths[OLE DB Source Output]"
+          TopLeft="515.5,461">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="93,86"
+              Start="0,0"
+              End="93,78.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,39"
+                    Point2="0,43"
+                    Point3="4,43" />
+                  <mssgle:LineSegment
+                    End="89,43" />
+                  <mssgle:CubicBezierSegment
+                    Point1="89,43"
+                    Point2="93,43"
+                    Point3="93,47" />
+                  <mssgle:LineSegment
+                    End="93,78.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -35472,24 +35371,82 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="163.2,41.6"
-          Id="Package\PLHR Differences\Derived Column 3"
-          TopLeft="35,653" />
         <EdgeLayout
-          Id="Package\PLHR Differences.Paths[Derived Column Output]"
-          TopLeft="225,674.8">
+          Id="Package\PLHR Differences.Paths[Flat File Source Output]"
+          TopLeft="578,276">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-26.8,0"
+              EndConnector="-40,-24"
               Start="0,0"
-              End="-19.3,0">
+              End="-32.5,-24">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-19.3,0" />
+                    End="-16,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-16,0"
+                    Point2="-20,0"
+                    Point3="-20,-4" />
+                  <mssgle:LineSegment
+                    End="-20,-20" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-20,-20"
+                    Point2="-20,-24"
+                    Point3="-24,-24" />
+                  <mssgle:LineSegment
+                    End="-32.5,-24" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\PLHR Differences.Paths[Derived Column Output3]"
+          TopLeft="527,568">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-57,-30"
+              Start="0,0"
+              End="-57,-22.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-53,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-53,0"
+                    Point2="-57,0"
+                    Point3="-57,-4" />
+                  <mssgle:LineSegment
+                    End="-57,-22.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\PLHR Differences.Paths[Derived Column Output2]"
+          TopLeft="146.25,336">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39"
+              Start="0,0"
+              End="0,31.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -35524,6 +35481,50 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                     Point3="-11,-23.2" />
                   <mssgle:LineSegment
                     End="-11,-30.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\PLHR Differences.Paths[Derived Column Output]"
+          TopLeft="225,674.8">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-26.8,0"
+              Start="0,0"
+              End="-19.3,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-19.3,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\PLHR Differences.Paths[Aggregate Output 1]"
+          TopLeft="143.5,417">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,24"
+              Start="0,0"
+              End="0,16.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

@@ -383,6 +383,11 @@ namespace PLR
                                 {
                                     satisfiedCourses.Add(course);
                                     SatisfiedCoursesForProgramByCatalogYearAndCampusCenter[key].Add(course);
+                                    
+                                    if (curProgram.progCode == "1108")
+                                    {
+                                        AACoursesForProgram.Add(course);
+                                    }
                                 }
                             }
 
@@ -415,9 +420,7 @@ namespace PLR
                             TotalCoreAndProfessionalForProgramByCampusCenter.Add(key, totalCoreAndProfessionalHours);
                             continue;
                         }
-
-                        ;
-
+                        
                         foreach (AcademicProgram.CatalogChange.Area area in catalog.areas)
                         {
                             bool genEdArea = false;
