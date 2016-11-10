@@ -37,6 +37,9 @@ namespace PLR
             public String month { get; set; }
             [Option('y', "year", Required = true)]
             public String year { get; set; }
+            [Option('s',"summry", Required = false, DefaultValue = false,
+                HelpText = "Used to generate a summary of the programs at the campus centers without comparing to a previous year")]
+            public bool summary {get; set;}
             [ParserState]
             public IParserState LastParserState {get; set;}
 
@@ -609,75 +612,104 @@ namespace PLR
             {
                 Directory.CreateDirectory("..\\..\\..\\data\\" + options.month + " " + options.year);
             }
-
+            
             using (System.IO.StreamWriter file = new System.IO.StreamWriter("..\\..\\..\\data\\" + options.month + " " +
-                options.year + "\\SACS " + (options.runForHighSchool ? "High School " : "") + "Program Location Report " + options.month + " " + options.year + ".csv"))
+                options.year + "\\SACS " + (options.runForHighSchool ? "High School " : "") + "Program Location Report " + (options.summary ? "Summary " : "") + options.month + " " + options.year + ".csv"))
             {
-                file.WriteLine("PGM CD, AWD TYPE, CATALOG YEAR, CAMP CNTR, TRM FROM, TRM TO, AREA, GROUP, CRS ID USED, CRS HRS, TOT PGM HRS, TOT GEN-ED HRS, TOT PROF HRS");
+                if (options.summary)
+	            {
+		            file.WriteLine("PGM CD,AWD TYPE,CATALOG YEAR,CAMP CNTR,TRM FROM,TRM TO,TOT REQD PGM HRS,TOT PGM HRS,% PGM HRS,TOT GEN-ED HRS,TOT PROF HRS");
 
-                foreach (AcademicProgram curProgram in programs)
-                {
-                    foreach (AcademicProgram.CatalogChange catalog in curProgram.catalogChanges)
+                    foreach (AcademicProgram curProgram in programs)
+	                {
+		                foreach (AcademicProgram.CatalogChange catalog in curProgram.catalogChanges)
+	                    {
+                            foreach (String camp in campusCenters)
+	                        {
+                                Tuple<String, String, String> key = new Tuple<string,string,string>(curProgram.progCode, catalog.effectiveTerm, camp);
+		 
+                                float totalProgramHours = TotalProgramHoursForProgramByCampusCenter[key] > catalog.totalProgramHours ? catalog.totalProgramHours : TotalProgramHoursForProgramByCampusCenter[key];
+                                float genEdHours = TotalGeneralEducationHoursForProgramByCampusCenter[key] > catalog.totalGeneralEducationHours ? catalog.totalGeneralEducationHours : TotalGeneralEducationHoursForProgramByCampusCenter[key];
+                                float coreAndProfHours = TotalCoreAndProfessionalForProgramByCampusCenter[key] > catalog.totalCoreAndProfessionalHours ? catalog.totalCoreAndProfessionalHours: TotalCoreAndProfessionalForProgramByCampusCenter[key];
+
+                                float percentageCompletable = (totalProgramHours / catalog.totalProgramHours) * 100;
+
+                                file.WriteLine(String.Format(curProgram.progCode + "," + curProgram.awardType + "," + catalog.effectiveTerm + "," + camp + "," + options.minTerm
+                                    + "," + options.maxTerm + "," + catalog.totalProgramHours + "," + totalProgramHours + "," + @",{0:0.00}," + genEdHours + coreAndProfHours, percentageCompletable));
+	                        }
+	                    }
+	                }
+	            }
+                else
+	            {
+                    file.WriteLine("PGM CD,AWD TYPE,CATALOG YEAR,CAMP CNTR,TRM FROM,TRM TO,AREA,GROUP,CRS ID USED,CRS HRS,TOT PGM HRS,TOT GEN-ED HRS,TOT PROF HRS");
+
+                    foreach (AcademicProgram curProgram in programs)
                     {
-                        foreach (String camp in campusCenters)
+                        foreach (AcademicProgram.CatalogChange catalog in curProgram.catalogChanges)
                         {
-                            Tuple<String, String, String> key = new Tuple<string, string, string>(curProgram.progCode, catalog.effectiveTerm, camp);
-
-                            if (SatisfiedCoursesForProgramByCatalogYearAndCampusCenter[key].Count > 0)
+                            foreach (String camp in campusCenters)
                             {
-                                foreach (String course in SatisfiedCoursesForProgramByCatalogYearAndCampusCenter[key])
-                                {
-                                    int areaNum = 0;
-                                    int groupNum = 0;
+                                Tuple<String, String, String> key = new Tuple<string, string, string>(curProgram.progCode, catalog.effectiveTerm, camp);
 
-                                    foreach (AcademicProgram.CatalogChange.Area area in catalog.areas)
+                                if (SatisfiedCoursesForProgramByCatalogYearAndCampusCenter[key].Count > 0)
+                                {
+                                    foreach (String course in SatisfiedCoursesForProgramByCatalogYearAndCampusCenter[key])
                                     {
-                                        foreach (AcademicProgram.CatalogChange.Area.Group group in area.groups)
+                                        int areaNum = 0;
+                                        int groupNum = 0;
+
+                                        foreach (AcademicProgram.CatalogChange.Area area in catalog.areas)
                                         {
-                                            if (group.courseDictionary.Keys.Contains(course))
+                                            foreach (AcademicProgram.CatalogChange.Area.Group group in area.groups)
                                             {
-                                                areaNum = area.areaNum;
-                                                groupNum = group.groupNum;
+                                                if (group.courseDictionary.Keys.Contains(course))
+                                                {
+                                                    areaNum = area.areaNum;
+                                                    groupNum = group.groupNum;
+                                                }
                                             }
                                         }
-                                    }
                                                                         
-                                    file.WriteLine(curProgram.progCode + "," + curProgram.awardType + "," + catalog.effectiveTerm + "," + camp + "," + options.minTerm + "," + options.maxTerm + "," +
-                                        areaNum.ToString() + "," + groupNum.ToString() + "," + course + "," + globalCourseDictionary[course].hours.ToString() + "," +
-                                        (TotalProgramHoursForProgramByCampusCenter[key] > catalog.totalProgramHours ? catalog.totalProgramHours.ToString() : 
-                                        TotalProgramHoursForProgramByCampusCenter[key].ToString() )
-                                        + "," + (TotalGeneralEducationHoursForProgramByCampusCenter[key] > catalog.totalGeneralEducationHours ? catalog.totalGeneralEducationHours.ToString()
-                                        : TotalGeneralEducationHoursForProgramByCampusCenter[key].ToString()) + ","
-                                        + (TotalCoreAndProfessionalForProgramByCampusCenter[key] > catalog.totalCoreAndProfessionalHours ? catalog.totalCoreAndProfessionalHours.ToString()
-                                        : TotalCoreAndProfessionalForProgramByCampusCenter[key].ToString()));
-                                }
-                                if (curProgram.progCode == "1108")
-                                {
-                                    foreach (String course in AACoursesByAACatalogAndCampus[key])
+                                        file.WriteLine(curProgram.progCode + "," + curProgram.awardType + "," + catalog.effectiveTerm + "," + camp + "," + options.minTerm + "," + options.maxTerm + "," +
+                                            areaNum.ToString() + "," + groupNum.ToString() + "," + course + "," + globalCourseDictionary[course].hours.ToString() + "," +
+                                            (TotalProgramHoursForProgramByCampusCenter[key] > catalog.totalProgramHours ? catalog.totalProgramHours.ToString() : 
+                                            TotalProgramHoursForProgramByCampusCenter[key].ToString() )
+                                            + "," + (TotalGeneralEducationHoursForProgramByCampusCenter[key] > catalog.totalGeneralEducationHours ? catalog.totalGeneralEducationHours.ToString()
+                                            : TotalGeneralEducationHoursForProgramByCampusCenter[key].ToString()) + ","
+                                            + (TotalCoreAndProfessionalForProgramByCampusCenter[key] > catalog.totalCoreAndProfessionalHours ? catalog.totalCoreAndProfessionalHours.ToString()
+                                            : TotalCoreAndProfessionalForProgramByCampusCenter[key].ToString()));
+                                    }
+                                    if (curProgram.progCode == "1108")
                                     {
-                                        int curYear = minTermYear;
-                                        int curTerm = minTermTerm;
-
-                                        if (!SatisfiedCoursesForProgramByCatalogYearAndCampusCenter[key].Contains(course))
+                                        foreach (String course in AACoursesByAACatalogAndCampus[key])
                                         {
-                                          file.WriteLine(curProgram.progCode + "," + curProgram.awardType + "," + catalog.effectiveTerm + "," + camp + "," + options.minTerm + "," + options.maxTerm + ",ELEC,,"
-                                            + course + "," + globalCourseDictionary[course].hours.ToString() + "," + (TotalProgramHoursForProgramByCampusCenter[key] > catalog.totalProgramHours 
-                                            ? catalog.totalProgramHours.ToString() : TotalProgramHoursForProgramByCampusCenter[key].ToString()) + "," + (TotalGeneralEducationHoursForProgramByCampusCenter[key] 
-                                            > catalog.totalGeneralEducationHours ? catalog.totalGeneralEducationHours.ToString(): TotalGeneralEducationHoursForProgramByCampusCenter[key].ToString()) 
-                                            + "," + (TotalCoreAndProfessionalForProgramByCampusCenter[key] > catalog.totalCoreAndProfessionalHours ? catalog.totalCoreAndProfessionalHours.ToString()
-                                            : TotalCoreAndProfessionalForProgramByCampusCenter[key].ToString()));  
+                                            int curYear = minTermYear;
+                                            int curTerm = minTermTerm;
+
+                                            if (!SatisfiedCoursesForProgramByCatalogYearAndCampusCenter[key].Contains(course))
+                                            {
+                                              file.WriteLine(curProgram.progCode + "," + curProgram.awardType + "," + catalog.effectiveTerm + "," + camp + "," + options.minTerm + "," + options.maxTerm + ",ELEC,,"
+                                                + course + "," + globalCourseDictionary[course].hours.ToString() + "," + (TotalProgramHoursForProgramByCampusCenter[key] > catalog.totalProgramHours 
+                                                ? catalog.totalProgramHours.ToString() : TotalProgramHoursForProgramByCampusCenter[key].ToString()) + "," + (TotalGeneralEducationHoursForProgramByCampusCenter[key] 
+                                                > catalog.totalGeneralEducationHours ? catalog.totalGeneralEducationHours.ToString(): TotalGeneralEducationHoursForProgramByCampusCenter[key].ToString()) 
+                                                + "," + (TotalCoreAndProfessionalForProgramByCampusCenter[key] > catalog.totalCoreAndProfessionalHours ? catalog.totalCoreAndProfessionalHours.ToString()
+                                                : TotalCoreAndProfessionalForProgramByCampusCenter[key].ToString()));  
+                                            }
                                         }
                                     }
                                 }
                             }
                         }
-                    }
+	                }
                 }
 
                 file.Close();
 
                 return 0;
             }
+
+
         }
 
 
