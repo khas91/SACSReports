@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TermLogic;
 
 namespace PLR
 {
@@ -37,7 +38,7 @@ namespace PLR
             public String month { get; set; }
             [Option('y', "year", Required = true)]
             public String year { get; set; }
-            [Option('s',"summry", Required = false, DefaultValue = false,
+            [Option('s',"summary", Required = false, DefaultValue = false,
                 HelpText = "Used to generate a summary of the programs at the campus centers without comparing to a previous year")]
             public bool summary {get; set;}
             [ParserState]
@@ -66,6 +67,9 @@ namespace PLR
             int minTermTerm = int.Parse("" + options.minTerm[4]);
             int maxTermYear = int.Parse(options.maxTerm.Substring(0, 4));
             int maxTermTerm = int.Parse("" + options.maxTerm[4]);
+
+            OrionTerm startTerm = new OrionTerm(options.minTerm);
+            OrionTerm stopTerm = new OrionTerm(options.maxTerm);
 
             //datastores
             Dictionary<String, AcademicProgram> programDictionary = new Dictionary<string, AcademicProgram>();
@@ -367,8 +371,7 @@ namespace PLR
                         Tuple<String, String, String> key = new Tuple<string, string, string>(curProgram.progCode, catalog.effectiveTerm, camp);
                         SatisfiedCoursesForProgramByCatalogYearAndCampusCenter.Add(key, new List<String>());
 
-                        while ((curYear < maxTermYear || (curYear == maxTermYear && curTerm <= maxTermTerm))
-                            && (curYear < catalog.endTermYear || (curYear == catalog.endTermYear && curTerm <= catalog.endTermTerm)))
+                        for (OrionTerm i = startTerm; i <= stopTerm; i++)
                         {
 
                             Tuple<String, String> yearkey = new Tuple<string, string>(camp, curYear.ToString() + curTerm.ToString());
@@ -380,8 +383,6 @@ namespace PLR
                             }
                             else
                             {
-                                curYear = curTerm == 3 ? curYear + 1 : curYear;
-                                curTerm = curTerm == 3 ? 1 : curTerm + 1;
                                 continue;
                             }
 
@@ -411,9 +412,6 @@ namespace PLR
                                     }
                                 }
                             }
-                                                                                   
-                            curYear = curTerm == 3 ? curYear + 1 : curYear;
-                            curTerm = curTerm == 3 ? 1 : curTerm + 1;
                         }
 
                         if (curProgram.progCode == "1108")

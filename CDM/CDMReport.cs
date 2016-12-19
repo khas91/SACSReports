@@ -395,7 +395,6 @@ namespace CDM
                                     }
                                 }  
                             }
-                           
                         }
 
                         curYear = curTerm == 3 ? curYear + 1 : curYear;
