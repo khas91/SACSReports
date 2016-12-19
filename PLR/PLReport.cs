@@ -87,7 +87,7 @@ namespace PLR
 
             String[] highschoolCodes = new String[]{"D1427","C1411","A1618","D1401","C1634","C1414","A1103","B1403","A1104","A1105","D1103","B1408","A1110","A1111","A1112",
                                                     "Z7000","A1303","A1116","A1301","A1117","Z7004","A1118","B1613","A1119","A1114","Z7015","Z7002","B1410","F1410","A1106",
-                                                    "A1122","B1414"};
+                                                    "A1122","B1414","A1115","A1121","A1421","D4407","Z7003"};
             
             SqlConnection conn = new SqlConnection("Server=vulcan;database=MIS;Trusted_Connection=yes");
 
