@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TermLogic;
+using Academic;
 
 namespace PLR
 {
@@ -722,67 +723,5 @@ namespace PLR
         }
 
 
-    }
-    public class AcademicProgram
-    {
-        public String progCode;
-        public String progName;
-        public String awardType;
-        public List<CatalogChange> catalogChanges;
-        public Dictionary<String, CatalogChange> catalogDictionary;
-        public bool financialAidApproved;
-
-        public class CatalogChange
-        {
-            public String effectiveTerm;
-            public String endTerm;
-            public bool financialAidApproved;
-            public int effectiveTermYear;
-            public int effectiveTermTerm;
-            public int endTermYear;
-            public int endTermTerm;
-            public List<Area> areas;
-            public List<String> flatCourseArray;
-            public Dictionary<int, Area> areaDictionary;
-            public int totalProgramHours;
-            public int totalGeneralEducationHours;
-            public int totalCoreAndProfessionalHours;
-
-            public class Area
-            {
-                public int areaNum;
-                public String areaType;
-                public List<Group> groups;
-                public Dictionary<int, Group> groupDictionary;
-                    
-                public class Group
-                {
-                    public int groupNum;
-                    public String optCode;
-                    public String operatorCode;
-                    public List<Course> courses;
-                    public Dictionary<String, Course> courseDictionary;
-                        
-                }
-            }
-        }
-    }
-
-    public class Course
-    {
-        public String courseID;
-        public float hours;
-
-        public static float findAndSumFirstNCourses(List<Course> courses, int n)
-        {
-            float[] courseHours = new float[courses.Count];
-
-            for (int i = 0; i < courseHours.Length; i++)
-            {
-                courseHours[i] = courses[i].hours;
-            }
-
-            return courseHours.OrderByDescending(x => x).Take(n).Sum();
-        }
     }
 }

@@ -8,6 +8,8 @@ using System.Data.SqlClient;
 using CommandLine;
 using CommandLine.Text;
 using System.IO;
+using Academic;
+using TermLogic;
 
 namespace CDM
 {
@@ -58,6 +60,9 @@ namespace CDM
             int minTermTerm = int.Parse("" + options.minTerm[4]);
             int maxTermYear = int.Parse(options.maxTerm.Substring(0, 4));
             int maxTermTerm = int.Parse("" + options.maxTerm[4]);
+
+            OrionTerm startTerm = new OrionTerm(options.minTerm);
+            OrionTerm stopTerm = new OrionTerm(options.maxTerm);
 
             //datastores
             Dictionary<String, AcademicProgram> programDictionary = new Dictionary<string, AcademicProgram>();
@@ -362,20 +367,17 @@ namespace CDM
                     TotalGeneralEducationHoursForProgram.Add(key, 0);
                     TotalCoreAndProfessionalForProgram.Add(key, 0);
                        
-                    while ((curYear < maxTermYear || (curYear == maxTermYear && curTerm <= maxTermTerm))
-                        && (curYear < catalog.endTermYear || (curYear == catalog.endTermYear && curTerm <= catalog.endTermTerm)))
+                    for(OrionTerm i = startTerm; i < stopTerm; i++)
                     {
                         String term = curYear.ToString() + curTerm.ToString();
 
                         if (!onlineCourses.ContainsKey(term))
                         {
-                            curYear = curTerm == 3 ? curYear + 1 : curYear;
-                            curTerm = curTerm == 3 ? 1 : curTerm + 1;
                             continue;
                         }
                         foreach (String course in catalog.flatCourseArray)
                         {
-                            if (onlineCourses[term].Contains(course))
+                            if (onlineCourses[i.ToString()].Contains(course))
                             {
                                 satisfiedCourses.Add(course);
                             }
@@ -383,7 +385,7 @@ namespace CDM
 
                         if (curProgram.progCode == "1108" )
                         {
-                            if (AAElectivesByTerm.ContainsKey(term))
+                            if (AAElectivesByTerm.ContainsKey(i.ToString()))
                             {
                                foreach (String course in AAElectivesByTerm[term])
                                 {
@@ -396,9 +398,6 @@ namespace CDM
                                 }  
                             }
                         }
-
-                        curYear = curTerm == 3 ? curYear + 1 : curYear;
-                        curTerm = curTerm == 3 ? 1 : curTerm + 1;
                     }
 
                     foreach (AcademicProgram.CatalogChange.Area area in catalog.areas)
