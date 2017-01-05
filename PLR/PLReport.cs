@@ -302,7 +302,9 @@ namespace PLR
                                   + " WHERE                                                                                                                             "
 	                              + "     class.efftrm <= '" + options.maxTerm + "'                                                                                     "
                                   + (options.campusCenter == "" ? "" : ("     AND class.campCntr = '" + options.campusCenter + "'"))
-	                              + "     AND class.efftrm >= '" + options.minTerm + "'", conn);
+	                              + "     AND class.efftrm >= '" + options.minTerm + "'                                                                                 "
+                                  + "     AND class.CLS_STAT <> 'C'                                                                                                     "
+                                  + "     AND class.CRNT_ENRLD > 0", conn);
             comm.CommandTimeout = 240;
             reader = comm.ExecuteReader();
 
