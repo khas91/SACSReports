@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="141"
-  DTS:VersionGUID="{9743A936-DC60-4420-8C9F-29F95CA265DB}">
+  DTS:VersionBuild="142"
+  DTS:VersionGUID="{4E7179A7-E12C-4F2C-9BDA-6C2F07EB3CD3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -31,7 +31,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="\\fscj.org\it\State Reporting\Stuart\ConsoleApplications\SACSReports\data\December 2016\SACS Course Delivery Method Difference Report December 2016.csv">
+          DTS:ConnectionString="\\fscj.org\it\State Reporting\Stuart\ConsoleApplications\SACSReports\data\January 2017\SACS Course Delivery Method Difference Report January 2017.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -509,7 +509,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="Z:\Stuart\ConsoleApplications\SACSReports\data\December 2016\SACS Program Approval Report December 2016.csv">
+          DTS:ConnectionString="Z:\Stuart\ConsoleApplications\SACSReports\data\January 2017\SACS Program Approval Report January 2017.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -898,7 +898,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="Z:\Stuart\ConsoleApplications\SACSReports\data\December 2016\SACS High School Program Location Report Difference Report December 2016.csv">
+          DTS:ConnectionString="Z:\Stuart\ConsoleApplications\SACSReports\data\January 2017\SACS High School Program Location Report Difference Report January 2017.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1063,7 +1063,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="Z:\Stuart\ConsoleApplications\SACSReports\data\December 2016\SACS Program Location Report Difference Report December 2016.csv">
+          DTS:ConnectionString="Z:\Stuart\ConsoleApplications\SACSReports\data\January 2017\SACS Program Location Report Difference Report January 2017.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1547,7 +1547,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="highSchoolMaxTerm">
       <DTS:VariableValue
-        DTS:DataType="8">20182</DTS:VariableValue>
+        DTS:DataType="8">20172</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1556,7 +1556,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="highSchoolMinTerm">
       <DTS:VariableValue
-        DTS:DataType="8">20142</DTS:VariableValue>
+        DTS:DataType="8">20141</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1565,7 +1565,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="maxTerm">
       <DTS:VariableValue
-        DTS:DataType="8">20172</DTS:VariableValue>
+        DTS:DataType="8">20173</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1574,7 +1574,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="minTerm">
       <DTS:VariableValue
-        DTS:DataType="8">20122</DTS:VariableValue>
+        DTS:DataType="8">20123</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1583,7 +1583,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="month">
       <DTS:VariableValue
-        DTS:DataType="8">December</DTS:VariableValue>
+        DTS:DataType="8">January</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1640,7 +1640,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="year">
       <DTS:VariableValue
-        DTS:DataType="8">2016</DTS:VariableValue>
+        DTS:DataType="8">2017</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -4407,7 +4407,6 @@
       DTS:refId="Package\Course Delivery Method"
       DTS:CreationName="Microsoft.ExecuteProcess"
       DTS:Description="Execute Process Task"
-      DTS:Disabled="True"
       DTS:DTSID="{BEFE7549-F38E-4A6F-A89F-738820E89567}"
       DTS:ExecutableType="Microsoft.ExecuteProcess"
       DTS:LocaleID="-1"
@@ -4420,7 +4419,7 @@
       <DTS:ObjectData>
         <ExecuteProcessData
           Executable="Z:\Stuart\ConsoleApplications\SACSReports\CDM\bin\Debug\CDM.exe"
-          Arguments="-m 20122 -x 20172 -o December -y 2016"
+          Arguments="-m 20123 -x 20173 -o January -y 2017"
           WorkingDirectory="Z:\Stuart\ConsoleApplications\SACSReports\CDM\bin\Debug" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -4428,7 +4427,6 @@
       DTS:refId="Package\High School Program Location Report"
       DTS:CreationName="Microsoft.ExecuteProcess"
       DTS:Description="Execute Process Task"
-      DTS:Disabled="True"
       DTS:DTSID="{5305803D-D1B4-4348-9A79-7FA513452D13}"
       DTS:ExecutableType="Microsoft.ExecuteProcess"
       DTS:LocaleID="-1"
@@ -4441,7 +4439,7 @@
       <DTS:ObjectData>
         <ExecuteProcessData
           Executable="Z:\Stuart\ConsoleApplications\SACSReports\PLR\bin\Debug\PLR.exe"
-          Arguments="-m 20142 -x 20182 -r true -o December -y 2016"
+          Arguments="-m 20141 -x 20172 -r true -o January -y 2017"
           WorkingDirectory="Z:\Stuart\ConsoleApplications\SACSReports\PLR\bin\Debug" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -18717,9 +18715,9 @@
               startId="Package\PLHR Differences\Previous Data.Outputs[Flat File Source Output]" />
             <path
               refId="Package\PLHR Differences.Paths[Merge Join Output2]"
-              endId="Package\PLHR Differences\Derived Column 1.Inputs[Derived Column Input]"
+              endId="Package\PLHR Differences\Derived Column.Inputs[Derived Column Input]"
               name="Merge Join Output"
-              startId="Package\PLHR Differences\Merge Join 2.Outputs[Merge Join Output]" />
+              startId="Package\PLHR Differences\Merge Join.Outputs[Merge Join Output]" />
             <path
               refId="Package\PLHR Differences.Paths[Merge Join Output1]"
               endId="Package\PLHR Differences\Sort 5.Inputs[Sort Input]"
@@ -18727,9 +18725,9 @@
               startId="Package\PLHR Differences\Merge Join 1.Outputs[Merge Join Output]" />
             <path
               refId="Package\PLHR Differences.Paths[Merge Join Output]"
-              endId="Package\PLHR Differences\Derived Column.Inputs[Derived Column Input]"
+              endId="Package\PLHR Differences\Derived Column 1.Inputs[Derived Column Input]"
               name="Merge Join Output"
-              startId="Package\PLHR Differences\Merge Join.Outputs[Merge Join Output]" />
+              startId="Package\PLHR Differences\Merge Join 2.Outputs[Merge Join Output]" />
             <path
               refId="Package\PLHR Differences.Paths[OLE DB Source Output]"
               endId="Package\PLHR Differences\Derived Column 2.Inputs[Derived Column Input]"
@@ -33046,9 +33044,9 @@
               startId="Package\PLR Differences\Previous Data.Outputs[Flat File Source Output]" />
             <path
               refId="Package\PLR Differences.Paths[Merge Join Output2]"
-              endId="Package\PLR Differences\Derived Column 1.Inputs[Derived Column Input]"
+              endId="Package\PLR Differences\Derived Column.Inputs[Derived Column Input]"
               name="Merge Join Output"
-              startId="Package\PLR Differences\Merge Join 2.Outputs[Merge Join Output]" />
+              startId="Package\PLR Differences\Merge Join.Outputs[Merge Join Output]" />
             <path
               refId="Package\PLR Differences.Paths[Merge Join Output1]"
               endId="Package\PLR Differences\Sort 5.Inputs[Sort Input]"
@@ -33056,9 +33054,9 @@
               startId="Package\PLR Differences\Merge Join 1.Outputs[Merge Join Output]" />
             <path
               refId="Package\PLR Differences.Paths[Merge Join Output]"
-              endId="Package\PLR Differences\Derived Column.Inputs[Derived Column Input]"
+              endId="Package\PLR Differences\Derived Column 1.Inputs[Derived Column Input]"
               name="Merge Join Output"
-              startId="Package\PLR Differences\Merge Join.Outputs[Merge Join Output]" />
+              startId="Package\PLR Differences\Merge Join 2.Outputs[Merge Join Output]" />
             <path
               refId="Package\PLR Differences.Paths[OLE DB Source Output]"
               endId="Package\PLR Differences\Derived Column 2.Inputs[Derived Column Input]"
@@ -33107,7 +33105,6 @@
       DTS:refId="Package\Program Approval Report"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:Disabled="True"
       DTS:DTSID="{BB24FDBE-AC10-49CE-A545-F910CA80CF4A}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -33639,7 +33636,6 @@
       DTS:refId="Package\Program Location Report"
       DTS:CreationName="Microsoft.ExecuteProcess"
       DTS:Description="Execute Process Task"
-      DTS:Disabled="True"
       DTS:DTSID="{2F379E54-566E-44ED-B849-1E269E9B4021}"
       DTS:ExecutableType="Microsoft.ExecuteProcess"
       DTS:LocaleID="-1"
@@ -33652,7 +33648,7 @@
       <DTS:ObjectData>
         <ExecuteProcessData
           Executable="Z:\Stuart\ConsoleApplications\SACSReports\PLR\bin\Debug\PLR.exe"
-          Arguments="-m 20122 -x 20172 -o December -y 2016"
+          Arguments="-m 20123 -x 20173 -o January -y 2017"
           WorkingDirectory="Z:\Stuart\ConsoleApplications\SACSReports\PLR\bin\Debug"
           WindowStyle="Hidden" />
       </DTS:ObjectData>
@@ -33676,14 +33672,35 @@
           ReadOnlyVariables="User::month,User::year"
           ReadWriteVariables="User::currCDMRData,User::currPLHRData,User::currPLRData,User::prevCDMRData,User::prevPLHRData,User::prevPLRData">
           <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_81d70baa5cd04720b3fe6260c0d2174d")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_81d70baa5cd04720b3fe6260c0d2174d")]
+[assembly: AssemblyCopyright("Copyright @  2016")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -34135,35 +34152,14 @@ namespace ST_81d70baa5cd04720b3fe6260c0d2174d.Properties {
   </ProjectExtensions>
 </Project>]]></ProjectItem>
           <ProjectItem
-            Name="Properties\AssemblyInfo.cs"
-            Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_81d70baa5cd04720b3fe6260c0d2174d")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_81d70baa5cd04720b3fe6260c0d2174d")]
-[assembly: AssemblyCopyright("Copyright @  2016")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -34384,7 +34380,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
       DTS:refId="Package\Sites with No Encoding"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:Disabled="True"
       DTS:DTSID="{620FE74C-619D-4D8B-ADF7-8E037DE3E7DC}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
@@ -34408,7 +34403,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
       DTS:refId="Package\Sites with No Encoding Output"
       DTS:CreationName="Microsoft.ScriptTask"
       DTS:Description="Script Task"
-      DTS:Disabled="True"
       DTS:DTSID="{B88EEE66-706D-47F4-86BC-FAA41B3465FC}"
       DTS:ExecutableType="Microsoft.ScriptTask"
       DTS:LocaleID="-1"
@@ -34423,14 +34417,35 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           Language="CSharp"
           ReadOnlyVariables="User::month,User::noEncodingResults,User::year">
           <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_ea67f9420e4b4d60a5b30cb15d3c38e6")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_ea67f9420e4b4d60a5b30cb15d3c38e6")]
+[assembly: AssemblyCopyright("Copyright @  2016")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -34826,35 +34841,14 @@ namespace ST_ea67f9420e4b4d60a5b30cb15d3c38e6.Properties {
     }
 }]]></ProjectItem>
           <ProjectItem
-            Name="Properties\AssemblyInfo.cs"
-            Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_ea67f9420e4b4d60a5b30cb15d3c38e6")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_ea67f9420e4b4d60a5b30cb15d3c38e6")]
-[assembly: AssemblyCopyright("Copyright @  2016")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -35958,7 +35952,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\PLHR Differences.Paths[Merge Join Output2]"
+          Id="Package\PLHR Differences.Paths[Merge Join Output]"
           TopLeft="415,649">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -36024,7 +36018,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\PLHR Differences.Paths[Merge Join Output]"
+          Id="Package\PLHR Differences.Paths[Merge Join Output2]"
           TopLeft="336,313">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -36618,7 +36612,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\PLR Differences.Paths[Merge Join Output2]"
+          Id="Package\PLR Differences.Paths[Merge Join Output]"
           TopLeft="415,648.8">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -36684,7 +36678,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\PLR Differences.Paths[Merge Join Output]"
+          Id="Package\PLR Differences.Paths[Merge Join Output2]"
           TopLeft="336,313">
           <EdgeLayout.Curve>
             <mssgle:Curve
