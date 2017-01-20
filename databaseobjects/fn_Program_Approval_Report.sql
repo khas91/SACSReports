@@ -1,0 +1,57 @@
+USE [MIS]
+GO
+
+/****** Object:  UserDefinedFunction [dbo].[fn_Program_Approval_Report]    Script Date: 1/20/2017 10:30:53 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE FUNCTION [dbo].[fn_Program_Approval_Report] (@awd_ty VARCHAR(MAX))
+RETURNS @programs TABLE
+(
+	PGM_CD VARCHAR(MAX)
+	,[Offcl TTL] VARCHAR(MAX)
+	,CIP_CD VARCHAR(MAX)
+	,AWD_TY VARCHAR(MAX)
+	,PGM_TTL_CRD_HRS VARCHAR(MAX)
+	,PGM_TTL_MIN_CNTCT_HRS_REQD VARCHAR(MAX)
+	,FIN_AID_APPRVD CHAR(1)
+	,SACS_APPROVAL CHAR(1)
+	,EFF_TRM CHAR(6)
+	,END_TRM VARCHAR(5)
+)
+AS
+BEGIN
+
+	INSERT INTO @programs
+		SELECT
+			prog.PGM_CD 
+			,CASE 
+				/*566C, 5000, AND 5002 are not right in ORION, hence they had to be hardcoded here. */
+				WHEN prog.PGM_CD = '566C' THEN prog.PGM_TRK_TTL
+				WHEN prog.PGM_OFFCL_TTL NOT IN ('', 'JAX PIPEFITTING APPRENTICESHIP', 'HEAVY EQUIPMENT OPERATION') THEN prog.PGM_OFFCL_TTL 
+				ELSE prog.PGM_TRK_TTL END AS 'Offcl TTL'
+			,prog.CIP_CD
+			,prog.AWD_TY
+			,prog.PGM_TTL_CRD_HRS
+			,prog.PGM_TTL_MIN_CNTCT_HRS_REQD
+			,prog.FIN_AID_APPRVD
+			,CASE WHEN prog.SACS_APPROVAL <> '' THEN prog.SACS_APPROVAL ELSE 'N' END AS 'SACS_APPROVAL'
+			,prog.EFF_TRM_D
+			,prog.END_TRM
+		FROM
+			MIS.dbo.ST_PROGRAMS_A_136 prog
+		WHERE
+			prog.END_TRM = ''
+			AND prog.EFF_TRM_D <> ''
+			AND prog.AWD_TY = CASE WHEN @AWD_TY <> '' THEN @AWD_TY ELSE prog.AWD_TY END
+			AND prog.AWD_TY NOT IN ('ND','NC','HS')
+	RETURN;
+END
+
+GO
+
+

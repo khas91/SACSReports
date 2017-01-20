@@ -276,7 +276,8 @@ namespace CDM
                                  +"     ,class.EVAL_CRED_HRS                                                                                                        " 
                                  +"     ,course.USED_FOR_AA_ELECTIVE                                                                                                " 
                                  +"     ,class.CNTCT_HRS", conn);
-            comm.CommandTimeout = 240;
+
+            comm.CommandTimeout = 1200;
             reader = comm.ExecuteReader();
 
             while (reader.Read())
